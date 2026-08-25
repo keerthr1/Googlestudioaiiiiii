@@ -1,0 +1,317 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #F8F8F8;
+  --color-fg: #14141F;
+  --color-muted: #475569;
+  --color-border: #E2E2E0;
+  --color-accent: #2036B8;
+  --color-heading: #2036B8;
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .text-fg {
+    color: #14141F;
+  }
+}
+
+/* Custom Vintage Old Computer Cursor */
+*, html, body {
+  cursor: url('/vintage-cursor.svg') 0 0, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='24' viewBox='0 0 16 24' shape-rendering='crispEdges'%3E%3Cpath d='M 0,0 V 17 L 3.5,13.5 L 6.5,20.5 L 9.5,19 L 6.5,12 H 12 Z' fill='%23000000'/%3E%3Cpath d='M 1,2 V 14.2 L 3.8,11.5 L 6.8,18.3 L 8.2,17.6 L 5.3,10.8 L 9.8,10.8 Z' fill='%23FFFFFF'/%3E%3C/svg%3E") 0 0, auto !important;
+}
+
+a, button, input[type="submit"], input[type="button"], select, label, [role="button"], .pointer, button *, a * {
+  cursor: url('/vintage-pointer.svg') 6 0, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='22' viewBox='0 0 18 22' shape-rendering='crispEdges'%3E%3Cpath d='M 5,0 H 8 V 6 H 10 V 3 H 12 V 6 H 13 V 4 H 15 V 6 H 16 V 5 H 18 V 13 H 17 V 15 H 16 V 16 H 14 V 17 H 8 V 16 H 6 V 14 H 5 V 6 Z M 2,9 H 5 V 12 H 2 Z' fill='%23000000'/%3E%3Cpath d='M 6,1 H 7 V 7 H 9 V 7 H 11 V 7 H 12 V 7 H 14 V 7 H 15 V 6 H 17 V 12 H 16 V 14 H 15 V 15 H 13 V 16 H 9 V 15 H 7 V 13 H 6 V 7 Z M 3,10 H 5 V 11 H 3 Z' fill='%23FFFFFF'/%3E%3C/svg%3E") 6 0, pointer !important;
+}
+
+input[type="text"], input[type="password"], textarea, [contenteditable="true"] {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' shape-rendering='crispEdges'%3E%3Cpath d='M7,2 L17,2 L17,4 L13,4 L13,10 L17,10 L17,12 L13,12 L13,18 L17,18 L17,20 L7,20 L7,18 L11,18 L11,12 L7,12 L7,10 L11,10 L11,4 L7,4 Z' fill='%23000000'/%3E%3Cpath d='M8,3 L16,3 L16,3.5 L12,3.5 L12,10.5 L16,10.5 L16,11.5 L12,11.5 L12,18.5 L16,18.5 L16,19 L8,19 L8,18.5 L10,18.5 L10,11.5 L8,11.5 L8,10.5 L10,10.5 L10,3.5 L8,3.5 Z' fill='%23ffffff'/%3E%3C/svg%3E") 12 11, text !important;
+}
+
+html, body, #root {
+  height: 100%;
+  height: 100dvh;
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden !important;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #dddddd;
+  background-image: url('/paper-bg.svg');
+  background-repeat: repeat;
+  background-size: 300px 300px;
+  background-attachment: fixed;
+  color: #2036B8;
+}
+
+/* Work Card Tags */
+.work-card-tag {
+  background-color: #FFFFFF;
+  border: 1px solid #C8D4E8;
+  color: #2036B8;
+  font-size: 11px;
+  border-radius: 4px;
+  padding: 3px 10px;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+/* Folder structure */
+.folder-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  min-height: 0;
+  position: relative;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  margin: 0 auto;
+}
+
+.folder-tabs {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  z-index: 50;
+  margin-left: 0;
+  background: transparent;
+  padding-top: 0;
+  border-radius: 0;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .folder-tabs {
+    width: 100%;
+  }
+}
+
+/* Logo tab — wider, acts as the "open folder" tab connecting to content */
+.folder-tab-logo {
+  background: #2036B8;
+  padding: 7px 22px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 12px 12px 0 0;
+  border: 1px solid #2036B8;
+  border-bottom: none;
+  position: relative;
+  margin-right: 4px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .folder-tab-logo {
+    padding: 6px 12px;
+    margin-right: 2px;
+  }
+  .folder-tab-logo svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* Nav tabs — inverted parallelogram (slanted right), stretched wider */
+.folder-tab-nav {
+  padding: 11px 40px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #2036B8;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s;
+  background: #EBEBEB;
+  border: 1px solid #E2E2E0;
+  border-bottom: none;
+  margin-right: 2px;
+  transform: skewX(-6deg);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .folder-tab-nav {
+    padding: 8px 12px;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+  }
+}
+
+.folder-tab-nav span {
+  display: inline-block;
+  transform: skewX(6deg);
+}
+
+.folder-tab-nav:hover {
+  color: #2036B8;
+  background: #E2E2E0;
+}
+
+.folder-tab-nav.active {
+  background: #FFFFFF;
+  color: #2036B8;
+  font-weight: 500;
+}
+
+/* The main folder body — white rectangle document frame with 3 rounded edges */
+.folder-body {
+  background-color: #F8F8F8;
+  background-image: 
+    linear-gradient(to right, rgba(32, 54, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(32, 54, 184, 0.06) 1px, transparent 1px);
+  background-size: 20px 20px;
+  position: relative;
+  z-index: 1;
+  border-radius: 0 20px 20px 20px;
+  border: 1px solid #E2E2E0;
+  box-shadow: 0 12px 32px -6px rgba(0, 0, 0, 0.07), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+  flex: 1 1 0%;
+  min-height: 0;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  isolation: isolate;
+  will-change: scroll-position;
+}
+
+html.dark .folder-body,
+body.dark .folder-body,
+html.dark-mode .folder-body,
+body.dark-mode .folder-body,
+.dark .folder-body,
+.dark-mode .folder-body {
+  background-color: #16161D;
+  background-image: 
+    linear-gradient(to right, rgba(90, 107, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(90, 107, 255, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not(.light):not(.light-mode) .folder-body {
+    background-color: #16161D;
+    background-image: 
+      linear-gradient(to right, rgba(90, 107, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(90, 107, 255, 0.08) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .folder-body {
+    border-radius: 0 14px 14px 14px;
+  }
+}
+
+/* Custom scrollbar for document frame */
+.folder-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.folder-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.folder-body::-webkit-scrollbar-thumb {
+  background: #C8D4E8;
+  border-radius: 4px;
+}
+
+.folder-body::-webkit-scrollbar-thumb:hover {
+  background: #2036B8;
+}
+
+/* Dropdown */
+.cs-dropdown {
+  display: none;
+  position: absolute;
+  top: 44px;
+  right: 0;
+  background: #FFFFFF;
+  border: 1px solid #E4E4E0;
+  border-radius: 12px;
+  min-width: 210px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.cs-dropdown.open {
+  display: block;
+}
+
+.cs-dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  gap: 8px;
+  padding: 10px 16px;
+  font-size: 13px;
+  color: #14141F;
+  text-decoration: none;
+  transition: background 0.15s;
+  font-weight: 400 !important;
+}
+
+.cs-dropdown-item:hover, .cs-dropdown-item:focus, .cs-dropdown-item:active, .cs-dropdown-item.active {
+  background: #F8F8F8;
+  font-weight: 400 !important;
+}
+
+/* Mobile: logo on top, nav tabs row wrapped below */
+@media (max-width: 768px) {
+  .folder-tabs {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .folder-tab-logo {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+  .folder-tab-nav {
+    flex: 1;
+    padding: 9px 4px;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-align: center;
+    justify-content: center;
+  }
+  .folder-nav-row {
+    display: flex;
+    width: calc(100% - 12px);
+    margin-right: 12px;
+    margin-top: -1px;
+  }
+}
+
+@media (min-width: 769px) {
+  .folder-tabs {
+    flex-wrap: nowrap;
+  }
+  .folder-nav-row {
+    display: flex;
+    align-items: flex-end;
+  }
+}

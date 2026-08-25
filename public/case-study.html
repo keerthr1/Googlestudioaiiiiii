@@ -1,0 +1,2060 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study — Keerthana Ravichandran</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Barlow Condensed', 'sans-serif'],
+                    },
+                    colors: {
+                        bg: '#F8F8F8',
+                        fg: '#14141F',
+                        muted: '#475569',
+                        border: '#E2E2E0',
+                        accent: '#2036B8',
+                        heading: '#2036B8',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Vintage Old Computer Cursor */
+        *, html, body {
+            cursor: url('/vintage-cursor.svg') 0 0, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='24' viewBox='0 0 16 24' shape-rendering='crispEdges'%3E%3Cpath d='M 0,0 V 17 L 3.5,13.5 L 6.5,20.5 L 9.5,19 L 6.5,12 H 12 Z' fill='%23000000'/%3E%3Cpath d='M 1,2 V 14.2 L 3.8,11.5 L 6.8,18.3 L 8.2,17.6 L 5.3,10.8 L 9.8,10.8 Z' fill='%23FFFFFF'/%3E%3C/svg%3E") 0 0, auto !important;
+        }
+
+        a, button, input[type="submit"], input[type="button"], select, label, [role="button"], .pointer, button *, a * {
+            cursor: url('/vintage-pointer.svg') 6 0, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='22' viewBox='0 0 18 22' shape-rendering='crispEdges'%3E%3Cpath d='M 5,0 H 8 V 6 H 10 V 3 H 12 V 6 H 13 V 4 H 15 V 6 H 16 V 5 H 18 V 13 H 17 V 15 H 16 V 16 H 14 V 17 H 8 V 16 H 6 V 14 H 5 V 6 Z M 2,9 H 5 V 12 H 2 Z' fill='%23000000'/%3E%3Cpath d='M 6,1 H 7 V 7 H 9 V 7 H 11 V 7 H 12 V 7 H 14 V 7 H 15 V 6 H 17 V 12 H 16 V 14 H 15 V 15 H 13 V 16 H 9 V 15 H 7 V 13 H 6 V 7 Z M 3,10 H 5 V 11 H 3 Z' fill='%23FFFFFF'/%3E%3C/svg%3E") 6 0, pointer !important;
+        }
+
+        input[type="text"], input[type="password"], textarea, [contenteditable="true"] {
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' shape-rendering='crispEdges'%3E%3Cpath d='M7,2 L17,2 L17,4 L13,4 L13,10 L17,10 L17,12 L13,12 L13,18 L17,18 L17,20 L7,20 L7,18 L11,18 L11,12 L7,12 L7,10 L11,10 L11,4 L7,4 Z' fill='%23000000'/%3E%3Cpath d='M8,3 L16,3 L16,3.5 L12,3.5 L12,10.5 L16,10.5 L16,11.5 L12,11.5 L12,18.5 L16,18.5 L16,19 L8,19 L8,18.5 L10,18.5 L10,11.5 L8,11.5 L8,10.5 L10,10.5 L10,3.5 L8,3.5 Z' fill='%23ffffff'/%3E%3C/svg%3E") 12 11, text !important;
+        }
+
+        html, body {
+            height: 100%;
+            height: 100dvh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden !important;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #dddddd;
+            background-image: url('/paper-bg.svg');
+            background-repeat: repeat;
+            background-size: 300px 300px;
+            background-attachment: fixed;
+            color: #2036B8;
+        }
+        .font-display { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; }
+
+        .cs-footer-border { border-top: 1px solid #2036B8; }
+
+        .floating-nav-btn { padding: 8px 16px; border-radius: 20px; border: 1px solid #C8D4E8; background: rgba(255,255,255,0.9); cursor: pointer; font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: #2036B8; transition: all 0.2s; font-family: 'Inter', sans-serif; font-weight: 500; outline: none !important; -webkit-tap-highlight-color: transparent; user-select: none; }
+        .floating-nav-btn:focus, .floating-nav-btn:active, .floating-nav-btn:focus-visible { outline: none !important; box-shadow: none !important; background: rgba(255,255,255,0.9) !important; font-weight: 500 !important; }
+
+        /* Password Input Focus Styling */
+        #cs-password-input {
+            outline: none !important;
+            box-shadow: none !important;
+            -webkit-tap-highlight-color: transparent;
+        }
+        #cs-password-input:focus,
+        #cs-password-input:focus-visible,
+        #cs-password-input:active {
+            outline: 0 !important;
+            outline-offset: 0 !important;
+            box-shadow: none !important;
+            border-color: #2036B8 !important;
+        }
+        #cs-password-input:focus,
+        #cs-password-input:focus-visible,
+        #cs-password-input:focus,
+        #cs-password-input:focus-visible {
+            border-color: #5A6BFF !important;
+        }
+
+        .floating-nav-btn, .floating-nav-btn { background: #1C1C26 !important; border-color: #2C2C36 !important; color: #5A6BFF !important; }
+        .theme-toggle-btn, .theme-toggle-btn { background: #1C1C26 !important; border-color: #2C2C36 !important; color: #5A6BFF !important; }
+
+        /* Folder structure */
+        .folder-wrapper { display: flex; flex-direction: column; flex: 1; min-height: 0; position: relative; z-index: 10; }
+        .folder-tabs { display: flex; align-items: flex-end; position: relative; z-index: 50; flex-shrink: 0; background: transparent; padding-top: 4px; }
+        .folder-tab-logo { background: #2036B8; padding: 7px 22px; font-size: 13px; font-weight: 500; color: #FFFFFF; text-decoration: none; border-radius: 12px 12px 0 0; border: 1px solid #2036B8; border-bottom: none; position: relative; margin-right: 4px; white-space: nowrap; display: inline-flex; align-items: center; justify-content: center; }
+        .folder-tab-nav { padding: 11px 40px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: #2036B8; text-decoration: none; position: relative; transition: all 0.2s; background: #EBEBEB; border: 1px solid #E2E2E0; border-bottom: none; margin-right: 2px; transform: skewX(-6deg); text-align: center; }
+        .folder-tab-nav span { display: inline-block; transform: skewX(6deg); }
+        .folder-tab-nav:hover { color: #2036B8; background: #E2E2E0; }
+        .folder-tab-nav.active { background: #F8F8F8; color: #2036B8; font-weight: 500; }
+        .folder-body { background-color: #F8F8F8; background-image: linear-gradient(to right, rgba(32, 54, 184, 0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(32, 54, 184, 0.06) 1px, transparent 1px); background-size: 20px 20px; position: relative; z-index: 1; flex: 1; min-height: 0; overflow-y: auto; border: 1px solid #E2E2E0; border-bottom-left-radius: 16px; border-bottom-right-radius: 16px; border-top-right-radius: 16px; }
+
+        .cs-dropdown { display: none; position: absolute; top: 44px; right: 0; background: #FFFFFF; border: 1px solid #E4E4E0; border-radius: 12px; min-width: 210px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); overflow: hidden; z-index: 100; white-space: nowrap; }
+        .cs-dropdown.open { display: block; }
+        .cs-dropdown-item { display: flex; align-items: center; justify-content: space-between; white-space: nowrap; gap: 8px; padding: 10px 16px; font-size: 13px; color: #14141F; text-decoration: none; transition: background 0.15s; font-weight: 400 !important; }
+        .cs-dropdown-item:hover, .cs-dropdown-item:focus, .cs-dropdown-item:active, .cs-dropdown-item.active { background: #F8F8F8; font-weight: 400 !important; }
+
+        .image-placeholder-card {
+            background-color: #FAFAFA;
+            border: 1px solid #E5E5E5;
+            border-radius: 16px;
+            padding: 56px 24px;
+            text-align: center;
+            color: #64748B;
+            font-size: 14px;
+            font-family: 'Inter', sans-serif;
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .folder-tabs { flex-wrap: wrap; width: 100%; }
+            .folder-tab-logo { padding: 10px 20px; font-size: 12px; }
+            .folder-tab-nav { flex: 1; padding: 9px 4px; font-size: 10px; letter-spacing: 0.08em; text-align: center; justify-content: center; }
+            .folder-nav-row { display: flex; width: calc(100% - 12px); margin-right: 12px; margin-top: -1px; }
+            .folder-body main {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+            .folder-body footer {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+        }
+        @media (min-width: 769px) { .folder-tabs { flex-wrap: nowrap; } .folder-nav-row { display: flex; align-items: flex-end; } }
+    </style>
+</head>
+<body class="selection:bg-blue-100">
+
+    <div class="relative h-full h-[100dvh] w-full max-w-full overflow-hidden flex flex-col p-3 sm:px-4 sm:py-[18px] md:px-5 md:py-[22px] lg:px-6 lg:pt-[17px] lg:pb-[19px] box-border mx-auto">
+
+        <!-- Case Studies dropdown on the RIGHT -->
+        <div class="absolute top-[20px] right-3 sm:top-[22px] sm:right-4 md:top-[25px] md:right-5 lg:top-[19px] lg:right-6 z-[100] flex items-center gap-2">
+            <div id="case-studies-nav" class="relative">
+                <button class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-[#C8D4E8] bg-white/90 backdrop-blur-sm cursor-pointer text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.12em] text-[#2036B8] transition-all hover:border-[#2036B8] focus:outline-none active:outline-none focus:ring-0 select-none active:font-medium focus:font-medium" onclick="toggleCsDropdown(event)">
+                    Case Studies
+                </button>
+                <div id="cs-dropdown" class="cs-dropdown">
+                    <a href="case-study.html?project=youtopia" onclick="selectProject('youtopia', event)" class="cs-dropdown-item text-[13px] font-normal active:font-normal flex items-center justify-between whitespace-nowrap">
+                        <span class="whitespace-nowrap text-[13px]">01 — Youtopia</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-neutral-400 shrink-0 ml-2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </a>
+                    <a href="case-study.html?project=revlr" onclick="selectProject('revlr', event)" class="cs-dropdown-item text-[13px] font-normal active:font-normal flex items-center justify-between whitespace-nowrap">
+                        <span class="whitespace-nowrap text-[13px]">02 — REVLR</span>
+                    </a>
+                    <a href="case-study.html?project=justickets" onclick="selectProject('justickets', event)" class="cs-dropdown-item text-[13px] font-normal active:font-normal flex items-center justify-between whitespace-nowrap">
+                        <span class="whitespace-nowrap text-[13px]">03 — Justickets</span>
+                    </a>
+                    <a href="case-study.html?project=myblockcounts" onclick="selectProject('myblockcounts', event)" class="cs-dropdown-item text-[13px] font-normal active:font-normal flex items-center justify-between whitespace-nowrap">
+                        <span class="whitespace-nowrap text-[13px]">04 — My Block Counts</span>
+                    </a>
+                    <a href="https://kaystudio.framer.website/" target="_blank" rel="noopener noreferrer" class="cs-dropdown-item text-[13px] font-normal active:font-normal flex items-center justify-between whitespace-nowrap">
+                        <span class="whitespace-nowrap text-[13px]">Beyond Product</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function toggleCsDropdown(e) {
+                if (e) e.stopPropagation();
+                const dropdown = document.getElementById('cs-dropdown');
+                if (dropdown) dropdown.classList.toggle('open');
+            }
+
+            function selectProject(projectId, e) {
+                if (e) e.preventDefault();
+                window.history.pushState({}, '', 'case-study.html?project=' + projectId);
+                renderCaseStudy();
+                const dropdown = document.getElementById('cs-dropdown');
+                if (dropdown) dropdown.classList.remove('open');
+                const folderBody = document.querySelector('.folder-body');
+                if (folderBody) folderBody.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            function applySavedTheme() {
+                // Keep light theme matching homepage
+                document.documentElement.classList.remove('dark-mode', 'dark');
+                document.body.classList.remove('dark-mode', 'dark');
+            }
+
+            applySavedTheme();
+            window.addEventListener('DOMContentLoaded', applySavedTheme);
+            window.addEventListener('popstate', () => {
+                renderCaseStudy();
+            });
+
+            // Close dropdown on click outside
+            document.addEventListener('click', (e) => {
+                const nav = document.getElementById('case-studies-nav');
+                const dropdown = document.getElementById('cs-dropdown');
+                if (nav && dropdown && !nav.contains(e.target)) {
+                    dropdown.classList.remove('open');
+                }
+            });
+        </script>
+
+        <div class="folder-wrapper flex-1 flex flex-col min-h-0 relative z-10">
+            <!-- Folder Tabs Row -->
+            <div class="folder-tabs flex-shrink-0">
+                <a href="/" class="folder-tab-logo" aria-label="Keerthana R. Home">
+                    <svg width="30" height="30" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+                        <path d="M 6 50 L 46 8 L 70 8 C 84 8 92 17 92 29 C 92 41 84 50 72 50 L 6 50 Z" />
+                        <line x1="42" y1="33" x2="66" y2="9" />
+                        <path d="M 6 50 L 66 92 L 80 78 L 48 50" />
+                    </svg>
+                </a>
+                <div class="folder-nav-row">
+                    <a href="/#work" class="folder-tab-nav"><span>WORK</span></a>
+                    <a href="/#about" class="folder-tab-nav"><span>ABOUT</span></a>
+                    <a href="https://drive.google.com/file/d/1ZJWXJ0DoubaRd7qDoCK57abnknj8BDMq/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="folder-tab-nav"><span>RESUME</span></a>
+                    <a href="/#contact" class="folder-tab-nav"><span>CONTACT</span></a>
+                </div>
+            </div>
+
+            <!-- Folder Body -->
+            <div class="folder-body flex-1 min-h-0 overflow-y-auto custom-scrollbar relative">
+            
+            <!-- CASE STUDY CONTAINER -->
+            <main class="mx-auto max-w-[1200px] px-5 sm:px-8 md:px-10 lg:px-16 py-8 sm:py-12 md:py-16">
+
+                <!-- Case Study Header (Always Visible) -->
+                <header class="pb-6 sm:pb-10">
+                    <h1 id="cs-title" class="font-display text-[36px] leading-[0.98] text-heading sm:text-[56px] md:text-[76px] lg:text-[88px] uppercase">
+                        YOUTOPIA
+                    </h1>
+                    <p id="cs-headline" class="mt-4 sm:mt-6 text-[14px] sm:text-[15px] md:text-[16px] leading-[1.65] text-fg w-full">
+                        Designing six interconnected products — from consumer onboarding to restaurant operations — around a shared AI nutrition platform still being defined.
+                    </p>
+                </header>
+
+                <!-- Project Metadata Grid (Always Visible: Role, Duration, Team, Shipped, Responsibilities) -->
+                <section class="border-t border-[#cccad8] text-[13px] sm:text-[14px] md:text-[15px] mb-8 sm:mb-12">
+                    <div class="py-6 sm:py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 sm:gap-6">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-[0.18em] text-muted block mb-1.5 font-medium">ROLE</span>
+                            <div id="cs-meta-role" class="text-fg leading-[1.6]">Product & Brand Designer</div>
+                        </div>
+                        <div>
+                            <span class="text-[11px] uppercase tracking-[0.18em] text-muted block mb-1.5 font-medium">DURATION</span>
+                            <div id="cs-meta-duration" class="text-fg leading-[1.6]">Nov 2025 – Mar 2026</div>
+                        </div>
+                        <div>
+                            <span class="text-[11px] uppercase tracking-[0.18em] text-muted block mb-1.5 font-medium">TEAM</span>
+                            <div id="cs-meta-team" class="text-fg leading-[1.6]">Founder · PM · Architects · Principal Engineers · Marketing</div>
+                        </div>
+                        <div>
+                            <span class="text-[11px] uppercase tracking-[0.18em] text-muted block mb-1.5 font-medium">SHIPPED</span>
+                            <div id="cs-meta-shipped" class="text-accent font-medium leading-[1.6]">Validated Product Architecture</div>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-6 sm:pt-8 border-t border-[#cccad8]">
+                        <span class="text-[11px] uppercase tracking-[0.18em] text-muted block mb-1.5 font-medium">RESPONSIBILITIES</span>
+                        <div id="cs-meta-responsibilities" class="text-fg leading-[1.6]">Product strategy · Information architecture · Interaction design · UX writing · Design system · Engineering collaboration</div>
+                    </div>
+                </section>
+
+                <!-- Password Protection Gate (Shown right after responsibilities when Youtopia is locked) -->
+                <div id="cs-password-gate" class="hidden py-8 sm:py-14 max-w-[520px] mx-auto text-center border border-border/80 bg-white rounded-2xl p-6 sm:p-10 mb-10 shadow-sm">
+                    <div class="text-neutral-400 flex justify-center mb-3">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    
+                    <span class="inline-block text-[11px] uppercase tracking-[0.22em] text-accent font-semibold mb-1.5">Restricted Access</span>
+                    <h2 class="font-display text-[24px] sm:text-[30px] leading-tight text-heading mb-6">PROTECTED CASE STUDY</h2>
+
+                    <form id="cs-password-form" class="space-y-3.5" onsubmit="handlePasswordSubmit(event)">
+                        <div class="relative flex items-center">
+                            <input
+                                type="password"
+                                id="cs-password-input"
+                                placeholder="Enter password"
+                                autocomplete="current-password"
+                                class="w-full pl-4 pr-11 py-3 rounded-xl border border-border bg-neutral-50 text-fg placeholder:text-muted/60 text-sm focus:outline-none focus-visible:outline-none focus:ring-0 focus-visible:ring-0 focus:border-[#2036B8] transition-colors"
+                            />
+                            <button
+                                type="button"
+                                onclick="toggleCsPasswordVisibility()"
+                                class="absolute right-3.5 p-1 text-neutral-400 hover:text-neutral-600 transition-colors cursor-pointer focus:outline-none focus:ring-0"
+                                aria-label="Toggle password visibility"
+                                title="Toggle password visibility"
+                            >
+                                <svg id="cs-eye-show" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                                <svg id="cs-eye-hide" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                                    <line x1="1" y1="1" x2="23" y2="23"></line>
+                                </svg>
+                            </button>
+                        </div>
+                        
+                        <div id="cs-password-error" class="hidden text-red-600 text-xs font-semibold py-0.5">
+                            Incorrect password. Please try again.
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="w-full py-3 px-6 rounded-xl bg-[#2036B8] text-white font-medium text-xs uppercase tracking-[0.15em] hover:opacity-95 active:scale-[0.99] transition-all cursor-pointer shadow-sm focus:outline-none focus:ring-0"
+                        >
+                            Unlock Case Study
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Main Unlocked Content Container (Hero Image & Body Content) -->
+                <div id="cs-main-content">
+                    <!-- Hero Image Placeholder Card -->
+                    <div id="cs-hero-image" class="image-placeholder-card min-h-[280px] sm:min-h-[360px] flex items-center justify-center rounded-2xl mb-10 sm:mb-16">
+                        Hero image — 16:9 or full-bleed
+                    </div>
+
+                    <!-- Dynamic Content Sections Container -->
+                    <div id="cs-content-body" class="space-y-12 sm:space-y-16 md:space-y-20 pt-2 sm:pt-4 pb-12 sm:pb-16 md:pb-20">
+                        <!-- Dynamic Body Content Rendered via JS -->
+                    </div>
+                </div>
+
+            </main>
+
+            <!-- FOOTER -->
+            <footer class="mx-auto max-w-[1200px] px-5 sm:px-8 md:px-10 lg:px-16 pb-8 text-[10.5px] sm:text-[12px] uppercase tracking-[0.12em] sm:tracking-[0.18em] text-accent font-medium">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3 cs-footer-border pt-6 sm:pt-8">
+                    <span class="whitespace-nowrap sm:whitespace-normal">© 2026 Keerthana Ravichandran</span>
+                    <span>Designed with Intention · Built with Care</span>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+</div>
+
+    <!-- DATA & RENDER SCRIPT -->
+    <script>
+        const PROJECTS = {
+            youtopia: {
+                eyebrow: 'CASE STUDY 01 · AI NUTRITION PLATFORM · NOV 2025 – MAR 2026 · PRODUCT & BRAND DESIGNER',
+                title: 'YOUTOPIA',
+                headline: 'Designing six interconnected products from consumer onboarding to restaurant operations around a shared AI nutrition platform still being defined.',
+                projectType: 'Early-stage AI product',
+                role: 'Product & Brand Designer',
+                duration: 'Nov 2025 – Mar 2026',
+                team: 'Founder · PM · Architects · Principal Engineers · Marketing',
+                responsibilities: 'Product strategy · Information architecture · Interaction design · UX writing · Design system · Engineering collaboration',
+                shipped: 'Validated Product Architecture',
+                prev: 'justickets',
+                next: 'revlr',
+                heroHTML: `
+                    <div id="cs-hero-image" class="w-full mb-16 space-y-8">
+                        <div class="w-full rounded-2xl overflow-hidden shadow-sm aspect-[16/9] min-h-[280px] sm:min-h-[360px] border border-[#2036B8] bg-transparent">
+                            <img src="/Home/Y_WC.webp" alt="Youtopia Hero Image" class="w-full h-full object-cover" loading="eager" decoding="async" />
+                        </div>
+                        <div class="w-full border border-[#2036B8] rounded-2xl bg-transparent p-6 sm:p-10 shadow-sm overflow-hidden">
+                        <style>
+                            .diag-line { stroke: #2036B8; stroke-width: 2.5; stroke-dasharray: 6 4; }
+                            .diag-center-circle { fill: #FFFFFF; stroke: #2036B8; stroke-width: 2.5; }
+                            .diag-center-title { fill: #2036B8; font-weight: 800; font-size: 22px; font-family: inherit; }
+                            .diag-center-sub { fill: #2036B8; opacity: 0.85; font-size: 13px; font-weight: 600; font-family: inherit; }
+
+                            .diag-card-bg { fill: #FFFFFF; stroke: #C8D4E8; stroke-width: 1.5; rx: 14; }
+                            .diag-card-title { fill: #111118; font-weight: 700; font-size: 15px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+                            .diag-card-sub { fill: #475569; font-size: 13px; font-weight: 500; font-family: inherit; }
+
+                            /* removed dark-mode SVG overrides to preserve light styling */
+                        </style>
+                        
+                        <div class="text-center mb-6 sm:mb-8">
+                            <h2 class="font-display text-[28px] sm:text-[36px] md:text-[44px] leading-tight text-heading">One System, Four Surfaces</h2>
+                            <p class="mt-2 text-[11px] sm:text-[13px] uppercase tracking-[0.22em] text-[#2036B8] font-semibold">THE YOUTOPIA ECOSYSTEM</p>
+                        </div>
+
+                        <div class="relative w-full mx-auto">
+                            <div class="text-[10px] uppercase font-mono tracking-wider text-[#2036B8] text-center sm:hidden mb-2">
+                                ← Scroll image to view full diagram →
+                            </div>
+                            <div class="w-full overflow-x-auto pb-2 scrollbar-thin">
+                                <svg viewBox="0 0 860 440" class="w-[680px] sm:w-full min-w-[680px] sm:min-w-0 h-auto flex-shrink-0 overflow-visible" fill="none">
+                                    <!-- Connecting lines from cards to center -->
+                                    <line x1="190" y1="85" x2="430" y2="220" class="diag-line" />
+                                    <line x1="670" y1="85" x2="430" y2="220" class="diag-line" />
+                                    <line x1="190" y1="355" x2="430" y2="220" class="diag-line" />
+                                    <line x1="670" y1="355" x2="430" y2="220" class="diag-line" />
+
+                                    <!-- Central PNA Node -->
+                                    <g>
+                                        <circle cx="430" cy="220" r="66" class="diag-center-circle" />
+                                        <text x="430" y="212" text-anchor="middle" class="diag-center-title">PNA</text>
+                                        <text x="430" y="235" text-anchor="middle" class="diag-center-sub">Core Engine</text>
+                                    </g>
+
+                                    <!-- Top-Left Card: Mobile App -->
+                                    <g class="diag-node-group">
+                                        <rect x="70" y="30" width="240" height="110" rx="14" class="diag-card-bg" />
+                                        <text x="190" y="66" text-anchor="middle" class="diag-card-title">01 // MOBILE APP</text>
+                                        <text x="190" y="92" text-anchor="middle" class="diag-card-sub">Onboarding · Membership</text>
+                                        <text x="190" y="112" text-anchor="middle" class="diag-card-sub">Household · Meal swap</text>
+                                    </g>
+
+                                    <!-- Top-Right Card: Admin Tools -->
+                                    <g class="diag-node-group">
+                                        <rect x="550" y="30" width="240" height="110" rx="14" class="diag-card-bg" />
+                                        <text x="670" y="66" text-anchor="middle" class="diag-card-title">02 // ADMIN TOOLS</text>
+                                        <text x="670" y="92" text-anchor="middle" class="diag-card-sub">Hubs · Geofencing</text>
+                                        <text x="670" y="112" text-anchor="middle" class="diag-card-sub">Delivery logistics</text>
+                                    </g>
+
+                                    <!-- Bottom-Left Card: Producer App -->
+                                    <g class="diag-node-group">
+                                        <rect x="70" y="300" width="240" height="110" rx="14" class="diag-card-bg" />
+                                        <text x="190" y="336" text-anchor="middle" class="diag-card-title">03 // PRODUCER APP</text>
+                                        <text x="190" y="362" text-anchor="middle" class="diag-card-sub">Recipe builder</text>
+                                        <text x="190" y="382" text-anchor="middle" class="diag-card-sub">Inventory verification</text>
+                                    </g>
+
+                                    <!-- Bottom-Right Card: Website -->
+                                    <g class="diag-node-group">
+                                        <rect x="550" y="300" width="240" height="110" rx="14" class="diag-card-bg" />
+                                        <text x="670" y="336" text-anchor="middle" class="diag-card-title">04 // WEBSITE</text>
+                                        <text x="670" y="362" text-anchor="middle" class="diag-card-sub">Role-based journey</text>
+                                        <text x="670" y="382" text-anchor="middle" class="diag-card-sub">Brand & UX writing</text>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                `,
+                content: {
+                    ndaNotice: "Due to NDA, visuals of the finished system can't be shown. This case study covers process and decisions only.",
+                    context: "Youtopia was building Precision Nourishment Automation (PNA) biomarker diagnostics and AI matching people to meals prepared by certified chefs and restaurants. When I joined, none of it had shape: no established workflows, six interconnected surfaces (consumer, producer, admin/ops, delivery, website, brand) being defined in parallel, business rules still being written.",
+                    problem: {
+                        headline: "How might we let six interdependent products behave like one system, while the business model defining them was still changing?",
+                        points: [
+                            "Household setup affected permissions, billing, and diagnostics but those relationships hadn't been defined anywhere.",
+                            "Operations tooling existed only as engineer-built utility cards, with no shared UX pattern across the platform.",
+                            "Producers needed to think about recipes, not nutritional computation but the early flow asked them to do both.",
+                            "Onboarding presented as one long form, so users hit the entire setup before understanding why any of it mattered."
+                        ],
+                        problemHTML: `
+                            <div class="w-full border border-[#2036B8] rounded-2xl bg-transparent p-5 sm:p-8 md:p-10 my-8 shadow-sm overflow-hidden">
+                                <div class="text-center mb-6 sm:mb-8">
+                                    <h3 class="font-display text-[22px] sm:text-[28px] md:text-[32px] font-bold leading-snug text-heading">Six Products. One Shared AI Platform.</h3>
+                                </div>
+
+                                <div class="relative w-full mx-auto">
+                                    <div class="text-[10px] uppercase font-mono tracking-wider text-[#2036B8] text-center sm:hidden mb-2">
+                                        ← Scroll image to view full diagram →
+                                    </div>
+                                    <div class="w-full overflow-x-auto pb-2 scrollbar-thin">
+                                        <svg viewBox="0 0 900 520" class="w-[720px] sm:w-full min-w-[720px] sm:min-w-0 h-auto flex-shrink-0 overflow-visible" fill="none">
+                                        <!-- CONNECTOR LINES TOP TO CENTER -->
+                                        <line x1="150" y1="135" x2="150" y2="165" class="stroke-[#2036B8]" stroke-width="2" />
+                                        <circle cx="150" cy="135" r="4" class="fill-[#2036B8]" />
+
+                                        <line x1="450" y1="135" x2="450" y2="190" class="stroke-[#2036B8]" stroke-width="2" />
+                                        <circle cx="450" cy="135" r="4" class="fill-[#2036B8]" />
+
+                                        <line x1="750" y1="135" x2="750" y2="165" class="stroke-[#2036B8]" stroke-width="2" />
+                                        <circle cx="750" cy="135" r="4" class="fill-[#2036B8]" />
+
+                                        <line x1="150" y1="165" x2="750" y2="165" class="stroke-[#2036B8]" stroke-width="2" />
+                                        <circle cx="450" cy="165" r="4" class="fill-[#2036B8]" />
+
+                                        <!-- Top Row Cards (Outlines match 4 surfaces: stroke-[#C8D4E8] / -->
+                                        <!-- 01 // Consumer App -->
+                                        <g>
+                                            <rect x="20" y="20" width="260" height="115" rx="12" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                            <text x="35" y="52" class="fill-[#111118] font-mono font-bold text-[14px]">01 // Consumer App</text>
+                                            <text x="35" y="78" class="fill-[#475569] text-[12px]">Onboarding, daily meal ordering,</text>
+                                            <text x="35" y="96" class="fill-[#475569] text-[12px]">&amp; household profile management.</text>
+                                        </g>
+                                        <!-- 02 // Diagnostics Integration -->
+                                        <g>
+                                            <rect x="320" y="20" width="260" height="115" rx="12" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                            <text x="335" y="52" class="fill-[#111118] font-mono font-bold text-[14px]">02 // Diagnostics Integration</text>
+                                            <text x="335" y="78" class="fill-[#475569] text-[12px]">Biomarker data ingest (blood, DNA)</text>
+                                            <text x="335" y="96" class="fill-[#475569] text-[12px]">translated into personalized targets.</text>
+                                        </g>
+                                        <!-- 03 // Producer Portal -->
+                                        <g>
+                                            <rect x="620" y="20" width="260" height="115" rx="12" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                            <text x="635" y="52" class="fill-[#111118] font-mono font-bold text-[14px]">03 // Producer Portal</text>
+                                            <text x="635" y="78" class="fill-[#475569] text-[12px]">Chef recipe creation with automated</text>
+                                            <text x="635" y="96" class="fill-[#475569] text-[12px]">AI macro balancing behind scenes.</text>
+                                        </g>
+
+                                        <!-- CENTER BLOCK -->
+                                        <g>
+                                            <rect x="200" y="190" width="500" height="135" rx="14" class="fill-none stroke-[#2036B8]" stroke-width="1.5" stroke-dasharray="5 4" />
+                                            <rect x="206" y="196" width="488" height="123" rx="10" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                            <path d="M 206 206 A 10 10 0 0 1 216 196 L 684 196 A 10 10 0 0 1 694 206 L 694 228 L 206 228 Z" class="fill-[#2036B8]" />
+
+                                            <text x="450" y="217" text-anchor="middle" class="fill-white font-mono font-bold text-[11px] tracking-[0.18em]">CENTRAL CORE ENGINE</text>
+                                            <text x="450" y="254" text-anchor="middle" class="fill-[#111118] font-bold text-[18px]">AI Nutrition &amp; Matching Platform</text>
+                                            <text x="450" y="280" text-anchor="middle" class="fill-[#475569] text-[13px]">Biomarker diagnostics, automated meal calculation, &amp; shared</text>
+                                            <text x="450" y="298" text-anchor="middle" class="fill-[#475569] text-[13px]">household permission logic</text>
+                                        </g>
+
+                                        <!-- CONNECTOR LINES CENTER TO BOTTOM -->
+                                        <line x1="450" y1="325" x2="450" y2="355" class="stroke-[#2036B8]" stroke-width="2" />
+                                        <circle cx="450" cy="355" r="4" class="fill-[#2036B8]" />
+
+                                        <line x1="150" y1="355" x2="750" y2="355" class="stroke-[#2036B8]" stroke-width="2" />
+
+                                        <line x1="150" y1="355" x2="150" y2="385" class="stroke-[#2036B8]" stroke-width="2" />
+                                        <circle cx="150" cy="385" r="4" class="fill-[#2036B8]" />
+
+                                        <line x1="450" y1="355" x2="450" y2="385" class="stroke-[#2036B8]" stroke-width="2" />
+                                        <circle cx="450" cy="385" r="4" class="fill-[#2036B8]" />
+
+                                        <line x1="750" y1="355" x2="750" y2="385" class="stroke-[#2036B8]" stroke-width="2" />
+                                        <circle cx="750" cy="385" r="4" class="fill-[#2036B8]" />
+
+                                        <!-- Bottom Row Cards -->
+                                        <!-- 04 // Admin Operations -->
+                                        <g>
+                                            <rect x="20" y="385" width="260" height="115" rx="12" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                            <text x="35" y="417" class="fill-[#111118] font-mono font-bold text-[14px]">04 // Admin Operations</text>
+                                            <text x="35" y="443" class="fill-[#475569] text-[12px]">Regional hub management, delivery</text>
+                                            <text x="35" y="461" class="fill-[#475569] text-[12px]">geofencing, and system overrides.</text>
+                                        </g>
+                                        <!-- 05 // Web Experience -->
+                                        <g>
+                                            <rect x="320" y="385" width="260" height="115" rx="12" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                            <text x="335" y="417" class="fill-[#111118] font-mono font-bold text-[14px]">05 // Web Experience</text>
+                                            <text x="335" y="443" class="fill-[#475569] text-[12px]">Educational acquisition funnel</text>
+                                            <text x="335" y="461" class="fill-[#475569] text-[12px]">designed to teach value before setup.</text>
+                                        </g>
+                                        <!-- 06 // Brand & Packaging -->
+                                        <g>
+                                            <rect x="620" y="385" width="260" height="115" rx="12" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                            <text x="635" y="417" class="fill-[#111118] font-mono font-bold text-[14px]">06 // Brand &amp; Packaging</text>
+                                            <text x="635" y="443" class="fill-[#475569] text-[12px]">Design system tokens and dynamic</text>
+                                            <text x="635" y="461" class="fill-[#475569] text-[12px]">labeling for physical meal packaging.</text>
+                                        </g>
+                                    </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        `
+                    },
+                    research: {
+                        intro: "Research wasn't a separate phase it happened through working sessions with architects, PMs, and the founder, and through direct usage data on the original onboarding and website.",
+                        insights: [
+                            { title: "Users abandoned onboarding before reaching any explanation of PNA's value", description: "education needed to come before commitment, not after." },
+                            { title: "Real households don't fit one account structure", description: "divorced parents, teens, and college dorms all needed different membership behavior." },
+                            { title: "Producers didn't need less information", description: "they needed the right information hidden from the wrong one." }
+                        ]
+                    },
+                    strategy: [
+                        { title: "Teach before asking for commitment", description: "earn understanding before requesting a decision." },
+                        { title: "Decide what users should never have to think about", description: "hide computation, not capability." },
+                        { title: "Design the model before the interface", description: "for ops and membership, product logic came first." }
+                    ],
+                    decisions: [
+                        {
+                            num: "DECISION 01",
+                            title: "Should membership belong to a person, a household, or a subscription?",
+                            body: "Engineering preferred account-level storage simpler to implement. Product argued households should own it, since future family plans depended on it. We walked edge cases through working sessions with architects and PMs a divorced parent needing a teenager in two households, each billed separately until every membership state produced consistent permissions, billing, and diagnostic behavior. Decided: household-owned, person-linked.",
+                            impact: "Impact: Onboarding could offer flexible entry points instead of forcing one path, and permissions/pricing/diagnostics all inherited a consistent model.",
+                            decisionHTML: `
+                                <div class="w-full border border-[#2036B8] rounded-2xl bg-transparent p-5 sm:p-8 md:p-10 my-8 shadow-sm overflow-hidden">
+                                    <div class="text-center mb-6 sm:mb-8">
+                                        <h3 class="font-display text-[22px] sm:text-[26px] md:text-[28px] font-bold leading-snug text-heading">Strategic Evaluation: Who owns membership?</h3>
+                                    </div>
+
+                                    <div class="relative w-full mx-auto">
+                                        <div class="text-[10px] uppercase font-mono tracking-wider text-[#2036B8] text-center sm:hidden mb-2">
+                                            ← Scroll image to view full diagram →
+                                        </div>
+                                        <div class="w-full overflow-x-auto pb-2 scrollbar-thin">
+                                            <svg viewBox="0 0 980 510" class="w-[780px] sm:w-full min-w-[780px] sm:min-w-0 h-auto flex-shrink-0 overflow-visible" fill="none">
+                                            <!-- Selected Option B Column Background Highlight -->
+                                            <rect x="450" y="10" width="275" height="260" rx="12" class="fill-white stroke-[#2036B8]" stroke-width="2" opacity="0.9" />
+
+                                            <!-- Table Header -->
+                                            <text x="25" y="36" class="fill-[#475569] font-mono font-bold text-[11px] sm:text-[12px]">EVALUATION CRITERIA</text>
+                                            <text x="235" y="36" class="fill-[#475569] font-mono font-bold text-[11px] sm:text-[12px]">OPTION A: INDIVIDUAL PERSON</text>
+                                            <text x="465" y="36" class="fill-[#2036B8] font-mono font-bold text-[11px] sm:text-[12px]">OPTION B: HOUSEHOLD-OWNED (SELECTED)</text>
+                                            <text x="745" y="36" class="fill-[#475569] font-mono font-bold text-[11px] sm:text-[12px]">OPTION C: SUBSCRIPTION ID</text>
+                                            <line x1="25" y1="52" x2="955" y2="52" class="stroke-[#C8D4E8]" stroke-width="1.5" />
+
+                                            <!-- Row 1: Billing & Split Payments -->
+                                            <text x="25" y="90" class="fill-[#111118] font-bold text-[13px] sm:text-[14px]">Billing &amp; Split Payments</text>
+                                            <text x="235" y="90" class="fill-[#64748B] text-[12.5px]">Complex multi-account sync</text>
+                                            <text x="465" y="90" class="fill-[#2036B8] font-bold text-[12.5px]">Native (Primary + Dependents)</text>
+                                            <text x="745" y="90" class="fill-[#64748B] text-[12.5px]">Rigid to single credit card</text>
+                                            <line x1="25" y1="110" x2="955" y2="110" class="stroke-[#C8D4E8]/60" stroke-width="1" />
+
+                                            <!-- Row 2: Biomarker Diagnostics -->
+                                            <text x="25" y="145" class="fill-[#111118] font-bold text-[13px] sm:text-[14px]">Biomarker Diagnostics</text>
+                                            <text x="235" y="145" class="fill-[#64748B] text-[12.5px]">Isolated per individual</text>
+                                            <text x="465" y="145" class="fill-[#2036B8] font-bold text-[12.5px]">Linked per person, mapped centrally</text>
+                                            <text x="745" y="145" class="fill-[#64748B] text-[12.5px]">Not supported natively</text>
+                                            <line x1="25" y1="165" x2="955" y2="165" class="stroke-[#C8D4E8]/60" stroke-width="1" />
+
+                                            <!-- Row 3: Edge-Case Resilience -->
+                                            <text x="25" y="200" class="fill-[#111118] font-bold text-[13px] sm:text-[14px]">Edge-Case Resilience</text>
+                                            <text x="235" y="200" class="fill-[#64748B] text-[12.5px]">Fails on custody/teen accounts</text>
+                                            <text x="465" y="200" class="fill-[#2036B8] font-bold text-[12.5px]">Handles split/shared households</text>
+                                            <text x="745" y="200" class="fill-[#64748B] text-[12.5px]">Breaks on subscription pause</text>
+                                            <line x1="25" y1="220" x2="955" y2="220" class="stroke-[#C8D4E8]/60" stroke-width="1" />
+
+                                            <!-- Row 4: Future Scalability -->
+                                            <text x="25" y="255" class="fill-[#111118] font-bold text-[13px] sm:text-[14px]">Future Scalability</text>
+                                            <text x="235" y="255" class="fill-[#64748B] text-[12.5px]">High friction for families</text>
+                                            <text x="465" y="255" class="fill-[#2036B8] font-bold text-[12.5px]">Extensible to corporate &amp; groups</text>
+                                            <text x="745" y="255" class="fill-[#64748B] text-[12.5px]">Tied to legacy billing engines</text>
+
+                                            <!-- Downstream Divider line & Title -->
+                                            <line x1="25" y1="310" x2="955" y2="310" class="stroke-[#2036B8]/40" stroke-width="1.5" />
+                                            <text x="25" y="338" class="fill-[#2036B8] font-mono font-bold text-[12px] tracking-[0.18em]">DOWNSTREAM SYSTEM EFFECTS</text>
+
+                                            <!-- Downstream Cards (Outlines match 4 surfaces: stroke-[#C8D4E8] / -->
+                                            <!-- Card 01 -->
+                                            <g>
+                                                <rect x="25" y="360" width="176" height="120" rx="10" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                                <text x="37" y="392" class="fill-[#111118] font-mono font-bold text-[12px]">01 // Pricing Model</text>
+                                                <text x="37" y="418" class="fill-[#64748B] text-[12px]">Tiered household seats</text>
+                                            </g>
+                                            <!-- Card 02 -->
+                                            <g>
+                                                <rect x="216" y="360" width="176" height="120" rx="10" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                                <text x="228" y="392" class="fill-[#111118] font-mono font-bold text-[12px]">02 // Diagnostics</text>
+                                                <text x="228" y="418" class="fill-[#64748B] text-[12px]">Inherited baseline metrics</text>
+                                            </g>
+                                            <!-- Card 03 -->
+                                            <g>
+                                                <rect x="407" y="360" width="176" height="120" rx="10" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                                <text x="419" y="392" class="fill-[#111118] font-mono font-bold text-[12px]">03 // Permissions</text>
+                                                <text x="419" y="418" class="fill-[#64748B] text-[12px]">Parental/Admin controls</text>
+                                            </g>
+                                            <!-- Card 04 -->
+                                            <g>
+                                                <rect x="598" y="360" width="176" height="120" rx="10" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                                <text x="610" y="392" class="fill-[#111118] font-mono font-bold text-[12px]">04 // Onboarding</text>
+                                                <text x="610" y="418" class="fill-[#64748B] text-[12px]">Invite &amp; claim flows</text>
+                                            </g>
+                                            <!-- Card 05 (Selected/Highlight) -->
+                                            <g>
+                                                <rect x="789" y="360" width="176" height="120" rx="10" class="fill-white stroke-[#2036B8]" stroke-width="2" />
+                                                <text x="801" y="392" class="fill-[#2036B8] font-mono font-bold text-[12px]">05 // AI Rec Engine</text>
+                                                <text x="801" y="418" class="fill-[#2036B8] font-medium text-[12px]">Shared batch optimization</text>
+                                            </g>
+                                        </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            `
+                        },
+                        {
+                            num: "DECISION 02",
+                            title: "How much nutritional complexity should producers see?",
+                            body: "We decided producers should create meals, not nutritional models. Nutritional optimization moved into the platform; recipes stayed chef-centric while AI handled validation.",
+                            impact: "Impact: Confidence in the AI held without asking chefs to understand it.",
+                            placeholder: "Decision 02 visual",
+                            decisionHTML: `
+                                <div class="w-full border border-[#2036B8] rounded-2xl bg-transparent p-5 sm:p-8 md:p-10 my-8 shadow-sm overflow-hidden">
+                                    <div class="text-center mb-6 sm:mb-8">
+                                        <h3 class="font-display text-[22px] sm:text-[26px] md:text-[28px] font-bold leading-snug text-heading">The recipe builder</h3>
+                                        <p class="text-[13px] sm:text-[14px] text-[#475569] mt-1">Visible workflow vs. hidden nutritional computation</p>
+                                    </div>
+
+                                    <div class="relative w-full mx-auto">
+                                        <div class="text-[10px] uppercase font-mono tracking-wider text-[#2036B8] text-center sm:hidden mb-2">
+                                            ← Scroll image to view full diagram →
+                                        </div>
+                                        <div class="w-full overflow-x-auto pb-2 scrollbar-thin">
+                                            <svg viewBox="0 0 920 400" class="w-[740px] sm:w-full min-w-[740px] sm:min-w-0 h-auto flex-shrink-0 overflow-visible" fill="none">
+                                            <!-- TOP CARD: VISIBLE TO CHEF -->
+                                            <g>
+                                                <rect x="20" y="10" width="880" height="135" rx="12" class="fill-white stroke-[#2036B8]" stroke-width="1.5" />
+                                                <text x="45" y="44" class="fill-[#2036B8] font-mono font-bold text-[12px] tracking-[0.12em]">VISIBLE TO CHEF</text>
+                                                
+                                                <!-- 4 Columns -->
+                                                <!-- Col 1 -->
+                                                <text x="130" y="94" text-anchor="middle" class="fill-[#111118] font-bold text-[14px]">Select ingredients</text>
+                                                <line x1="240" y1="65" x2="240" y2="110" class="stroke-[#C8D4E8]" stroke-width="1.5" />
+
+                                                <!-- Col 2 -->
+                                                <text x="350" y="94" text-anchor="middle" class="fill-[#111118] font-bold text-[14px]">Build recipe steps</text>
+                                                <line x1="460" y1="65" x2="460" y2="110" class="stroke-[#C8D4E8]" stroke-width="1.5" />
+
+                                                <!-- Col 3 -->
+                                                <text x="570" y="94" text-anchor="middle" class="fill-[#111118] font-bold text-[14px]">Set portion &amp; yield</text>
+                                                <line x1="680" y1="65" x2="680" y2="110" class="stroke-[#C8D4E8]" stroke-width="1.5" />
+
+                                                <!-- Col 4 -->
+                                                <text x="790" y="94" text-anchor="middle" class="fill-[#111118] font-bold text-[14px]">Submit for approval</text>
+                                            </g>
+
+                                            <!-- CONNECTOR DASHED LINE -->
+                                            <line x1="460" y1="145" x2="460" y2="195" class="stroke-[#2036B8]" stroke-width="2" stroke-dasharray="4 4" />
+
+                                            <!-- BOTTOM CARD: HANDLED BY THE PLATFORM -->
+                                            <g>
+                                                <rect x="20" y="195" width="880" height="185" rx="12" class="fill-white stroke-[#2036B8]" stroke-width="1.5" />
+                                                <text x="45" y="235" class="fill-[#2036B8] font-mono font-bold text-[12px] tracking-[0.12em]">HANDLED BY THE PLATFORM</text>
+
+                                                <!-- Col 1 -->
+                                                <text x="166" y="285" text-anchor="middle" class="fill-[#111118] font-medium text-[13.5px]">Nutrient-target matching</text>
+                                                <text x="166" y="308" text-anchor="middle" class="fill-[#111118] font-medium text-[13.5px]">against diagnostic profile</text>
+                                                <line x1="313" y1="265" x2="313" y2="325" class="stroke-[#C8D4E8]" stroke-width="1.5" />
+
+                                                <!-- Col 2 -->
+                                                <text x="460" y="285" text-anchor="middle" class="fill-[#111118] font-medium text-[13.5px]">Ingredient verification</text>
+                                                <text x="460" y="308" text-anchor="middle" class="fill-[#111118] font-medium text-[13.5px]">against certified list</text>
+                                                <line x1="607" y1="265" x2="607" y2="325" class="stroke-[#C8D4E8]" stroke-width="1.5" />
+
+                                                <!-- Col 3 -->
+                                                <text x="754" y="285" text-anchor="middle" class="fill-[#111118] font-medium text-[13.5px]">Computation of</text>
+                                                <text x="754" y="308" text-anchor="middle" class="fill-[#111118] font-medium text-[13.5px]">optimal nutrient ratios</text>
+                                            </g>
+                                        </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            `
+                        },
+                        {
+                            num: "DECISION 03",
+                            title: "How should admin tooling get built with no existing UX pattern?",
+                            body: "Before any screen, I worked with principal engineers and the architect to understand how hub coverage, geofence overlap, and restaurant-to-region assignment actually worked since one decision could break live delivery logic.",
+                            impact: "Impact: Reusable operational patterns instead of one-off screens.",
+                            placeholder: "Decision 03 visual",
+                            decisionHTML: `
+                                <div class="w-full border border-[#2036B8] rounded-2xl bg-transparent p-5 sm:p-8 md:p-10 my-8 shadow-sm overflow-hidden">
+                                    <div class="text-center mb-6 sm:mb-8">
+                                        <h3 class="font-display text-[20px] sm:text-[24px] md:text-[26px] font-bold leading-snug text-heading">Operational decisions become product behavior</h3>
+                                    </div>
+
+                                    <div class="relative w-full mx-auto">
+                                        <div class="text-[10px] uppercase font-mono tracking-wider text-[#2036B8] text-center sm:hidden mb-2">
+                                            ← Scroll image to view full diagram →
+                                        </div>
+                                        <div class="w-full overflow-x-auto pb-2 scrollbar-thin">
+                                            <svg viewBox="0 0 1000 380" class="w-[800px] sm:w-full min-w-[800px] sm:min-w-0 h-auto flex-shrink-0 overflow-visible" fill="none">
+                                            <!-- NODE 01: Restaurant Node -->
+                                            <g>
+                                                <rect x="20" y="100" width="185" height="180" rx="10" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                                <line x1="30" y1="100" x2="195" y2="100" class="stroke-[#2036B8]" stroke-width="4" stroke-linecap="round" />
+                                                <text x="35" y="132" class="fill-[#111118] font-mono font-bold text-[12px]">01 // Restaurant Node</text>
+                                                
+                                                <circle cx="38" cy="160" r="2.5" class="fill-[#2036B8]" />
+                                                <text x="48" y="164" class="fill-[#64748B] text-[11.5px]">Kitchen Batch Capacity</text>
+
+                                                <circle cx="38" cy="190" r="2.5" class="fill-[#2036B8]" />
+                                                <text x="48" y="194" class="fill-[#64748B] text-[11.5px]">Prep Time Windows</text>
+
+                                                <circle cx="38" cy="220" r="2.5" class="fill-[#2036B8]" />
+                                                <text x="48" y="224" class="fill-[#64748B] text-[11.5px]">Ingredient Inventory</text>
+                                            </g>
+
+                                            <!-- CONNECTOR 1 -->
+                                            <line x1="205" y1="190" x2="255" y2="190" class="stroke-[#2036B8]" stroke-width="1.5" />
+                                            <circle cx="255" cy="190" r="4" class="fill-[#2036B8]" />
+
+                                            <!-- NODE 02: Regional Hub -->
+                                            <g>
+                                                <rect x="255" y="100" width="185" height="180" rx="10" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                                <line x1="265" y1="100" x2="430" y2="100" class="stroke-[#2036B8]" stroke-width="4" stroke-linecap="round" />
+                                                <text x="270" y="132" class="fill-[#111118] font-mono font-bold text-[12px]">02 // Regional Hub</text>
+                                                
+                                                <circle cx="273" cy="160" r="2.5" class="fill-[#2036B8]" />
+                                                <text x="283" y="164" class="fill-[#64748B] text-[11.5px]">Cold Storage Limits</text>
+
+                                                <circle cx="273" cy="190" r="2.5" class="fill-[#2036B8]" />
+                                                <text x="283" y="194" class="fill-[#64748B] text-[11.5px]">Quality Assurance</text>
+
+                                                <circle cx="273" cy="220" r="2.5" class="fill-[#2036B8]" />
+                                                <text x="283" y="224" class="fill-[#64748B] text-[11.5px]">Multi-Chef Sorting</text>
+                                            </g>
+
+                                            <!-- CONNECTOR 2 -->
+                                            <line x1="440" y1="190" x2="490" y2="190" class="stroke-[#2036B8]" stroke-width="1.5" />
+                                            <circle cx="490" cy="190" r="4" class="fill-[#2036B8]" />
+
+                                            <!-- NODE 03: Dynamic Geofence Engine (Central Featured Node) -->
+                                            <g>
+                                                <rect x="490" y="65" width="240" height="250" rx="10" class="fill-white stroke-[#2036B8]" stroke-width="2" />
+                                                
+                                                <!-- Header Banner -->
+                                                <path d="M 490 75 A 10 10 0 0 1 500 65 L 720 65 A 10 10 0 0 1 730 75 L 730 105 L 490 105 Z" class="fill-[#2036B8]" />
+                                                <text x="610" y="90" text-anchor="middle" class="fill-white font-mono font-bold text-[11px] tracking-[0.05em]">03 // DYNAMIC GEOFENCE ENGINE</text>
+
+                                                <!-- Body content -->
+                                                <text x="508" y="132" class="fill-[#111118] font-bold text-[13px]">Active Service Boundaries</text>
+                                                <text x="508" y="153" class="fill-[#64748B] text-[11.5px]">Calculates real-time coverage</text>
+                                                <text x="508" y="171" class="fill-[#64748B] text-[11.5px]">based on transit degradation.</text>
+
+                                                <line x1="508" y1="192" x2="712" y2="192" class="stroke-[#C8D4E8]" stroke-width="1" />
+
+                                                <text x="508" y="218" class="fill-[#2036B8] font-mono font-bold text-[11px] tracking-wide">CASCADING RULE:</text>
+                                                <text x="508" y="240" class="fill-[#111118] text-[11.5px]">Hub failure instantly shrinks</text>
+                                                <text x="508" y="258" class="fill-[#111118] text-[11.5px]">Consumer App ordering area.</text>
+                                            </g>
+
+                                            <!-- CONNECTOR 3 (RIGHT BRANCHING LINES) -->
+                                            <circle cx="730" cy="190" r="4" class="fill-[#2036B8]" />
+                                            <line x1="730" y1="190" x2="750" y2="190" class="stroke-[#2036B8]" stroke-width="1.5" />
+                                            <path d="M 750 190 L 775 80 L 795 80" class="stroke-[#2036B8]" stroke-width="1.5" fill="none" />
+                                            <path d="M 750 190 L 775 300 L 795 300" class="stroke-[#2036B8]" stroke-width="1.5" fill="none" />
+
+                                            <!-- NODE 04A: Dispatch Router -->
+                                            <g>
+                                                <rect x="795" y="10" width="185" height="160" rx="10" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                                <line x1="805" y1="10" x2="970" y2="10" class="stroke-[#2036B8]" stroke-width="4" stroke-linecap="round" />
+                                                <text x="810" y="42" class="fill-[#111118] font-mono font-bold text-[12px]">04A // Dispatch Router</text>
+
+                                                <circle cx="813" cy="70" r="2.5" class="fill-[#2036B8]" />
+                                                <text x="823" y="74" class="fill-[#64748B] text-[11.5px]">Courier Assignment</text>
+
+                                                <circle cx="813" cy="100" r="2.5" class="fill-[#2036B8]" />
+                                                <text x="823" y="104" class="fill-[#64748B] text-[11.5px]">Thermal Routing</text>
+
+                                                <circle cx="813" cy="130" r="2.5" class="fill-[#2036B8]" />
+                                                <text x="823" y="134" class="fill-[#64748B] text-[11.5px]">ETA Guarantees</text>
+                                            </g>
+
+                                            <!-- NODE 04B: Consumer State -->
+                                            <g>
+                                                <rect x="795" y="210" width="185" height="160" rx="10" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                                <line x1="805" y1="210" x2="970" y2="210" class="stroke-[#2036B8]" stroke-width="4" stroke-linecap="round" />
+                                                <text x="810" y="242" class="fill-[#111118] font-mono font-bold text-[12px]">04B // Consumer State</text>
+
+                                                <circle cx="813" cy="270" r="2.5" class="fill-[#2036B8]" />
+                                                <text x="823" y="274" class="fill-[#64748B] text-[11.5px]">Menu Availability</text>
+
+                                                <circle cx="813" cy="300" r="2.5" class="fill-[#2036B8]" />
+                                                <text x="823" y="304" class="fill-[#64748B] text-[11.5px]">Delivery Windows</text>
+
+                                                <circle cx="813" cy="330" r="2.5" class="fill-[#2036B8]" />
+                                                <text x="823" y="334" class="fill-[#64748B] text-[11.5px]">Dynamic Pricing</text>
+                                            </g>
+                                        </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            `
+                        }
+                    ],
+                    system: "Built reusable patterns for onboarding steps, membership/household states, producer verification flows, and admin geofence components documented so engineering could build against a consistent model rather than one-off specs.",
+                    systemPlaceholder: "Execution / system screens",
+                    systemHTML: `
+                        <div class="w-full border border-[#2036B8] rounded-2xl bg-transparent p-5 sm:p-8 md:p-10 my-8 shadow-sm overflow-hidden">
+                            <div class="text-center mb-6 sm:mb-8">
+                                <h3 class="font-display text-[22px] sm:text-[28px] md:text-[32px] font-bold leading-tight text-heading">One system. Multiple products.</h3>
+                                <p class="text-[13px] sm:text-[14px] text-[#475569] mt-1">Reusable product patterns reduced ambiguity before engineering began.</p>
+                            </div>
+
+                            <div class="relative w-full mx-auto">
+                                <div class="text-[10px] uppercase font-mono tracking-wider text-[#2036B8] text-center sm:hidden mb-2">
+                                    ← Scroll image to view full diagram →
+                                </div>
+                                <div class="w-full overflow-x-auto pb-2 scrollbar-thin">
+                                    <svg viewBox="0 0 960 510" class="w-[780px] sm:w-full min-w-[780px] sm:min-w-0 h-auto flex-shrink-0 overflow-visible" fill="none">
+                                    <!-- CARD A -->
+                                    <g>
+                                        <rect x="20" y="20" width="290" height="215" rx="10" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                        <line x1="30" y1="20" x2="300" y2="20" class="stroke-[#2036B8]" stroke-width="4" stroke-linecap="round" />
+                                        <text x="36" y="52" class="fill-[#111118] font-mono font-bold text-[11.5px]">PATTERN A // PROGRESSIVE SETUP STEP</text>
+                                        <text x="36" y="70" class="fill-[#64748B] text-[11px]">Applied in: Consumer Onboarding, Chef Verification</text>
+                                        
+                                        <rect x="35" y="86" width="260" height="38" rx="6" class="fill-[#F1F5F9] stroke-[#E2E8F0]" stroke-width="1" />
+                                        <text x="165" y="110" text-anchor="middle" class="fill-[#2036B8] font-bold text-[11.5px]">01. Value Explanation &gt; 02. Data Request</text>
+
+                                        <text x="36" y="152" class="fill-[#475569] text-[11px]">• Rule: Earn trust before asking for biological inputs.</text>
+                                        <text x="36" y="174" class="fill-[#475569] text-[11px]">• Zero drop-off setup sequencing pattern.</text>
+                                    </g>
+
+                                    <!-- CARD B -->
+                                    <g>
+                                        <rect x="335" y="20" width="290" height="215" rx="10" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                        <line x1="345" y1="20" x2="615" y2="20" class="stroke-[#2036B8]" stroke-width="4" stroke-linecap="round" />
+                                        <text x="351" y="52" class="fill-[#111118] font-mono font-bold text-[11.5px]">PATTERN B // HOUSEHOLD ENTITY CARD</text>
+                                        <text x="351" y="70" class="fill-[#64748B] text-[11px]">Applied in: Consumer App, Admin Ops, Billing</text>
+                                        
+                                        <rect x="350" y="86" width="260" height="38" rx="6" class="fill-[#F1F5F9] stroke-[#E2E8F0]" stroke-width="1" />
+                                        <text x="480" y="110" text-anchor="middle" class="fill-[#2036B8] font-bold text-[11.5px]">[ Primary Member ] + [ Dependent Seats ]</text>
+
+                                        <text x="351" y="152" class="fill-[#475569] text-[11px]">• Rule: Single card UI handles split permissions.</text>
+                                        <text x="351" y="174" class="fill-[#475569] text-[11px]">• Inherits billing state automatically.</text>
+                                    </g>
+
+                                    <!-- CARD C -->
+                                    <g>
+                                        <rect x="650" y="20" width="290" height="215" rx="10" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                        <line x1="660" y1="20" x2="930" y2="20" class="stroke-[#2036B8]" stroke-width="4" stroke-linecap="round" />
+                                        <text x="666" y="52" class="fill-[#111118] font-mono font-bold text-[11.5px]">PATTERN C // OPERATIONAL GEOFENCE CARD</text>
+                                        <text x="666" y="70" class="fill-[#64748B] text-[11px]">Applied in: Admin Ops, Delivery Routing</text>
+                                        
+                                        <rect x="665" y="86" width="260" height="38" rx="6" class="fill-[#F1F5F9] stroke-[#E2E8F0]" stroke-width="1" />
+                                        <text x="795" y="110" text-anchor="middle" class="fill-[#2036B8] font-bold text-[11.5px]">Boundary Polygon + Transit Delay Slider</text>
+
+                                        <text x="666" y="152" class="fill-[#475569] text-[11px]">• Rule: Reusable component across internal tools.</text>
+                                        <text x="666" y="174" class="fill-[#475569] text-[11px]">• Direct map coordinate manipulation.</text>
+                                    </g>
+
+                                    <!-- CARD D -->
+                                    <g>
+                                        <rect x="20" y="265" width="290" height="215" rx="10" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                        <line x1="30" y1="265" x2="300" y2="265" class="stroke-[#2036B8]" stroke-width="4" stroke-linecap="round" />
+                                        <text x="36" y="297" class="fill-[#111118] font-mono font-bold text-[11.5px]">PATTERN D // RECIPE COMPLIANCE BADGE</text>
+                                        <text x="36" y="315" class="fill-[#64748B] text-[11px]">Applied in: Producer Portal, Consumer Meal View</text>
+                                        
+                                        <rect x="35" y="331" width="260" height="38" rx="6" class="fill-[#F1F5F9] stroke-[#E2E8F0]" stroke-width="1" />
+                                        <text x="165" y="355" text-anchor="middle" class="fill-[#2036B8] font-bold text-[11.5px]">AI Verification Tag [ Validated / Adjustments ]</text>
+
+                                        <text x="36" y="397" class="fill-[#475569] text-[11px]">• Rule: Standardized validation state indicator.</text>
+                                        <text x="36" y="419" class="fill-[#475569] text-[11px]">• Uniform status signal across ecosystems.</text>
+                                    </g>
+
+                                    <!-- CARD E -->
+                                    <g>
+                                        <rect x="335" y="265" width="290" height="215" rx="10" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                        <line x1="345" y1="265" x2="615" y2="265" class="stroke-[#2036B8]" stroke-width="4" stroke-linecap="round" />
+                                        <text x="351" y="297" class="fill-[#111118] font-mono font-bold text-[11.5px]">PATTERN E // SYSTEM OVERRIDE DIALOG</text>
+                                        <text x="351" y="315" class="fill-[#64748B] text-[11px]">Applied in: Admin Control, Support Desk</text>
+                                        
+                                        <rect x="350" y="331" width="260" height="38" rx="6" class="fill-[#F1F5F9] stroke-[#E2E8F0]" stroke-width="1" />
+                                        <text x="480" y="355" text-anchor="middle" class="fill-[#2036B8] font-bold text-[11.5px]">Manual Override + Audit Log Entry</text>
+
+                                        <text x="351" y="397" class="fill-[#475569] text-[11px]">• Rule: Consistent safety protocol for ops team.</text>
+                                        <text x="351" y="419" class="fill-[#475569] text-[11px]">• Audits all non-automated actions.</text>
+                                    </g>
+
+                                    <!-- CARD F -->
+                                    <g>
+                                        <rect x="650" y="265" width="290" height="215" rx="10" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                        <line x1="660" y1="265" x2="930" y2="265" class="stroke-[#2036B8]" stroke-width="4" stroke-linecap="round" />
+                                        <text x="666" y="297" class="fill-[#111118] font-mono font-bold text-[11.5px]">PATTERN F // DYNAMIC PACKAGING LABEL</text>
+                                        <text x="666" y="315" class="fill-[#64748B] text-[11px]">Applied in: Kitchen Print Engine, Physical Box</text>
+                                        
+                                        <rect x="665" y="331" width="260" height="38" rx="6" class="fill-[#F1F5F9] stroke-[#E2E8F0]" stroke-width="1" />
+                                        <text x="795" y="355" text-anchor="middle" class="fill-[#2036B8] font-bold text-[11.5px]">Thermal Label Grid (Zero Post-Print Color)</text>
+
+                                        <text x="666" y="397" class="fill-[#475569] text-[11px]">• Rule: Translates UI tokens directly to print.</text>
+                                        <text x="666" y="419" class="fill-[#475569] text-[11px]">• Cost-optimized physical design system.</text>
+                                    </g>
+                                </svg>
+                                </div>
+                            </div>
+                        </div>
+                    `,
+                    validation: "We walked edge cases through working sessions with architects and PMs until every membership state standard family, divorced parents, dorm move, independent adult produced consistent permissions, billing, and diagnostic behavior, before any of it reached engineering. Producer flows were validated the same way against real chef workflows, to confirm the hidden-complexity boundary actually held.",
+                    validationPlaceholder: "Validation / testing photo",
+                    validationHTML: `
+                        <div class="w-full border border-[#2036B8] rounded-2xl bg-transparent p-5 sm:p-8 md:p-10 my-8 shadow-sm overflow-hidden">
+                            <div class="text-center mb-6 sm:mb-8">
+                                <h3 class="font-display text-[22px] sm:text-[28px] md:text-[32px] font-bold leading-tight text-heading">Edge-Case Stress Testing Matrix</h3>
+                            </div>
+
+                            <div class="relative w-full mx-auto">
+                                <div class="text-[10px] uppercase font-mono tracking-wider text-[#2036B8] text-center sm:hidden mb-2">
+                                    ← Scroll image to view full diagram →
+                                </div>
+                                <div class="w-full overflow-x-auto pb-2 scrollbar-thin">
+                                    <svg viewBox="0 0 960 450" class="w-[780px] sm:w-full min-w-[780px] sm:min-w-0 h-auto flex-shrink-0 overflow-visible" fill="none">
+                                    <!-- Table Outer Border & Background -->
+                                    <rect x="20" y="15" width="920" height="420" rx="10" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+
+                                    <!-- Table Header Background -->
+                                    <path d="M 20 25 A 10 10 0 0 1 30 15 L 930 15 A 10 10 0 0 1 940 25 L 940 58 L 20 58 Z" class="fill-[#2036B8]" />
+
+                                    <!-- Header Column Titles -->
+                                    <text x="40" y="41" class="fill-white font-mono font-bold text-[11px] tracking-wider">TEST SCENARIO</text>
+                                    <text x="235" y="41" class="fill-white font-mono font-bold text-[11px] tracking-wider">SYSTEM EDGE CONDITION</text>
+                                    <text x="500" y="41" class="fill-white font-mono font-bold text-[11px] tracking-wider">EXPECTED BEHAVIOR</text>
+                                    <text x="825" y="41" class="fill-white font-mono font-bold text-[11px] tracking-wider">RESULT</text>
+
+                                    <!-- ROW 1 -->
+                                    <g>
+                                        <text x="40" y="88" class="fill-[#111118] font-bold text-[13px]">01. Split Guardianship</text>
+                                        <text x="40" y="108" class="fill-[#64748B] text-[11.5px]">Child linked to 2 households</text>
+
+                                        <text x="235" y="88" class="fill-[#475569] text-[12px]">Conflicting dietary rules set</text>
+                                        <text x="235" y="108" class="fill-[#475569] text-[12px]">by different parents.</text>
+
+                                        <text x="500" y="88" class="fill-[#111118] text-[12px]">Strict union of restrictions applied automatically.</text>
+                                        <text x="500" y="108" class="fill-[#2036B8] font-semibold text-[12px]">Child safety takes priority over meal preference.</text>
+
+                                        <rect x="815" y="80" width="85" height="32" rx="6" class="fill-[#2036B8]" />
+                                        <text x="857.5" y="100.5" text-anchor="middle" class="fill-white font-mono font-bold text-[11px] tracking-wider">PASSED</text>
+                                    </g>
+
+                                    <line x1="20" y1="148" x2="940" y2="148" class="stroke-[#C8D4E8]" stroke-width="1" />
+
+                                    <!-- ROW 2 -->
+                                    <g>
+                                        <text x="40" y="178" class="fill-[#111118] font-bold text-[13px]">02. Transit Delay</text>
+                                        <text x="40" y="198" class="fill-[#64748B] text-[11.5px]">Delivery dynamic delay &gt; 45m</text>
+
+                                        <text x="235" y="178" class="fill-[#475569] text-[12px]">Thermal degradation threshold</text>
+                                        <text x="235" y="198" class="fill-[#475569] text-[12px]">exceeded during peak hours.</text>
+
+                                        <text x="500" y="178" class="fill-[#111118] text-[12px]">Hub instantly shrinks consumer geofence area.</text>
+                                        <text x="500" y="198" class="fill-[#2036B8] font-semibold text-[12px]">Prevents orders that cannot meet quality standards.</text>
+
+                                        <rect x="815" y="170" width="85" height="32" rx="6" class="fill-[#2036B8]" />
+                                        <text x="857.5" y="190.5" text-anchor="middle" class="fill-white font-mono font-bold text-[11px] tracking-wider">PASSED</text>
+                                    </g>
+
+                                    <line x1="20" y1="238" x2="940" y2="238" class="stroke-[#C8D4E8]" stroke-width="1" />
+
+                                    <!-- ROW 3 -->
+                                    <g>
+                                        <text x="40" y="268" class="fill-[#111118] font-bold text-[13px]">03. Lab Outlier Ingest</text>
+                                        <text x="40" y="288" class="fill-[#64748B] text-[11.5px]">Biomarker reading spike</text>
+
+                                        <text x="235" y="268" class="fill-[#475569] text-[12px]">Ingested laboratory result</text>
+                                        <text x="235" y="288" class="fill-[#475569] text-[12px]">outside expected safety range.</text>
+
+                                        <text x="500" y="268" class="fill-[#111118] text-[12px]">Automated AI calculation pauses; triggers flag.</text>
+                                        <text x="500" y="288" class="fill-[#2036B8] font-semibold text-[12px]">Routes to clinical ops dashboard for manual review.</text>
+
+                                        <rect x="815" y="260" width="85" height="32" rx="6" class="fill-[#2036B8]" />
+                                        <text x="857.5" y="280.5" text-anchor="middle" class="fill-white font-mono font-bold text-[11px] tracking-wider">PASSED</text>
+                                    </g>
+
+                                    <line x1="20" y1="328" x2="940" y2="328" class="stroke-[#C8D4E8]" stroke-width="1" />
+
+                                    <!-- ROW 4 -->
+                                    <g>
+                                        <text x="40" y="358" class="fill-[#111118] font-bold text-[13px]">04. Primary Card Failure</text>
+                                        <text x="40" y="378" class="fill-[#64748B] text-[11.5px]">Household billing declined</text>
+
+                                        <text x="235" y="358" class="fill-[#475569] text-[12px]">Primary account payment</text>
+                                        <text x="235" y="378" class="fill-[#475569] text-[12px]">fails on renewal date.</text>
+
+                                        <text x="500" y="358" class="fill-[#111118] text-[12px]">Grants 48-hour grace period for dependent profiles.</text>
+                                        <text x="500" y="378" class="fill-[#2036B8] font-semibold text-[12px]">Prevents service disruption to children or dependents.</text>
+
+                                        <rect x="815" y="350" width="85" height="32" rx="6" class="fill-[#2036B8]" />
+                                        <text x="857.5" y="370.5" text-anchor="middle" class="fill-white font-mono font-bold text-[11px] tracking-wider">PASSED</text>
+                                    </g>
+                                </svg>
+                                </div>
+                            </div>
+                        </div>
+                    `,
+                    outcome: {
+                        subtext: "Pre-launch framed as validated progress, not launch metrics.",
+                        points: [
+                            "Engineering implemented against a shared workflow model, rather than resolving product logic during development.",
+                            "Product assumptions were resolved before development, not during.",
+                            "Reduced implementation ambiguity by documenting reusable interaction and operational patterns.",
+                            "Packaging redesign removed post-print coloring cost while covering every order scenario."
+                        ]
+                    },
+                    reflection: "Household membership wasn't an onboarding feature. It became a product model that shaped permissions, diagnostics, pricing, and future expansion. That pattern repeated throughout Youtopia most interface decisions were consequences of earlier product decisions.",
+                    ownership: {
+                        led: "Onboarding architecture, household model exploration, producer workflows, design system, website IA",
+                        codefined: "Membership rules, geofence operations, recipe builder logic, product roadmap priorities"
+                    }
+                }
+            },
+            revlr: {
+                eyebrow: 'CASE STUDY 02 · CLIENT PROJECT (UMBC IMAGING RESEARCH CENTER) · JAN 2025 – MAY 2025 · PRODUCT & UX DESIGNER',
+                title: 'REVLR',
+                headline: 'Spatial interaction framework for complex system modeling in virtual reality.',
+                projectType: 'Spatial & VR Research',
+                role: 'Product & UX Designer',
+                duration: 'Jan 2025 – May 2025',
+                team: 'Engineers, Research Directors',
+                responsibilities: 'UX research · User interviews · Interaction ideation · VR usability testing · Design system development · Engineering collaboration',
+                shipped: '<a href="https://revlrstudio.com/" target="_blank" rel="noopener noreferrer" class="underline hover:opacity-80 transition-opacity">REVLR↗</a>',
+                prev: 'youtopia',
+                next: 'myblockcounts',
+                heroHTML: `
+                    <div id="cs-hero-image" class="w-full rounded-2xl overflow-hidden mb-16 shadow-sm aspect-[16/9] min-h-[280px] sm:min-h-[360px] border border-[#2036B8] bg-transparent">
+                        <img src="/REVLR/R_Hero.avif" alt="REVLR Hero Image" class="w-full h-full object-cover" loading="eager" decoding="async" />
+                    </div>
+                `,
+                content: {
+                    ndaNotice: "Due to NDA, visuals of the finished system can't be shown. This case study covers process and decisions only.",
+                    context: "REVLR is an immersive 3D environment that lets researchers model and understand complex, adaptive systems government agencies, NGOs, and community-focused nonprofits working on problems too interconnected for slide decks and spreadsheets to hold. Instead of forcing a system into a linear report, REVLR puts users inside a spatial, navigable model where quantitative data, qualitative insight, and early hypotheses sit in the same environment. One live study used it to visualize the full range of factors shaping elementary education outcomes. I owned the interaction design strategy: the control framework, navigation patterns, and design system that let researchers manipulate a dense, unified model without losing focus inside it with no existing VR pattern library to build from.",
+                    problem: {
+                        headline: "How might we help researchers confidently navigate and manipulate a complex system model in a spatial environment, without the interface competing with the data itself?",
+                        points: [
+                            "Complex, inconsistent controls left users unsure what actions were even available.",
+                            "The interface competed directly with the 3D data model for visual attention.",
+                            "No reusable VR component system existed to design or build from.",
+                            "Controls needed to stay accessible without breaking immersion in the model."
+                        ],
+                        placeholder: null
+                    },
+                    research: {
+                        intro: "I studied control placement, spatial hierarchy, interaction feedback, and navigation patterns directly with researchers using REVLR to model real problems, not abstract test tasks.",
+                        insights: [
+                            { title: "Spatial interfaces demand designing for attention", description: "every control competes with the environment and has to justify its presence." },
+                            { title: "Persistent UI created distraction;", description: "contextual, appear-when-needed interactions supported exploration instead." },
+                            { title: "Feedback is critical in VR", description: "without a cursor state to rely on, users need explicit confirmation an action registered." }
+                        ],
+                        placeholder: "Research & discovery — spatial hierarchy & control placement studies in VR",
+                        researchHTML: `
+                            <div class="w-full rounded-2xl overflow-hidden border border-[#2036B8] bg-transparent p-0 my-8 shadow-sm">
+                                <img src="/REVLR/R_Research.webp" alt="REVLR Research and Discovery" class="w-full h-full object-cover" loading="lazy" decoding="async" />
+                            </div>
+                        `
+                    },
+                    strategy: [
+                        { title: "Reduce visual interruption", description: "controls support interaction without competing with the system model." },
+                        { title: "Create predictable behaviors", description: "interactions stay consistent across different actions and contexts." },
+                        { title: "Design for scalability", description: "components need to extend across future VR and web experiences." }
+                    ],
+                    decisions: [
+                        {
+                            num: "DECISION 01",
+                            title: "How should controls live in VR?",
+                            body: "Traditional menus created visual distraction inside an immersive model. I evaluated floating panels, spatial menus, and persistent chrome against contextual controls that surface only when relevant. Contextual controls won because they reduced visual noise while keeping the interaction physically close to the object being manipulated, shortening both visual search and hand movement.",
+                            impact: "Impact: Contextual controls reduced visual noise & shortened hand movement",
+                            placeholder: null
+                        },
+                        {
+                            num: "DECISION 02",
+                            title: "How should hierarchy work in a data-dense environment?",
+                            body: "More UI risked overwhelming an already dense 3D field. Hierarchy came from depth, scale, spacing, and motion rather than color so the data model stayed visually dominant and controls only asserted themselves when relevant.",
+                            impact: "Impact: Depth, scale, spacing & motion hierarchy kept data dominant",
+                            placeholder: null
+                        },
+                        {
+                            num: "DECISION 03",
+                            title: "How should VR components scale?",
+                            body: "No established design system exists for immersive platforms to inherit. Built reusable patterns for controls, navigation, settings, and feedback states giving engineering and design a shared language instead of one-off screens.",
+                            impact: "Impact: Standardized component library across VR and web",
+                            placeholder: null
+                        }
+                    ],
+                    decisionsPlaceholder: "Key design decisions — spatial interaction & control framework synthesis",
+                    decisionsHTML: `
+                        <div class="w-full rounded-2xl overflow-hidden border border-[#2036B8] bg-transparent p-0 my-8 shadow-sm">
+                            <img src="REVLR/R_Decisions.avif" alt="REVLR Key Design Decisions" class="w-full h-full object-cover" />
+                        </div>
+                    `,
+                    system: "Built a scalable component library controls, interaction states, navigation patterns for consistency across VR and web. Prototyped in Framer with the Layerbeam VR plugin, tested directly on Meta Quest, since spatial interaction can't be fully evaluated from a flat screen.",
+                    systemPlaceholder: null,
+                    validation: "Ran usability and A/B testing directly in VR discoverability, navigation, and task flow with real users on-headset. Each round of findings fed directly back into the component system.",
+                    validationPlaceholder: "Validation & usability testing — spatial navigation & task flow evaluation in VR headset",
+                    validationHTML: `
+                        <div class="w-full rounded-2xl overflow-hidden border border-[#2036B8] bg-transparent p-0 my-8 shadow-sm">
+                            <img src="/REVLR/R_Validation.webp" alt="REVLR Usability Testing" class="w-full h-full object-cover" />
+                        </div>
+                    `,
+                    outcome: {
+                        subtext: "Validated metrics & outcomes",
+                        points: [
+                            "+40% user engagement redesigning the VR interface around human-centered design principles",
+                            "30% cognitive load improved task efficiency through usability testing and interaction optimization",
+                            "+100% system standardization took the interface from no reusable components to a fully standardized control system across VR and web",
+                            "Established REVLR's first structured interaction system, replacing inconsistent one-off controls",
+                            "Gave researchers, engineers, and design a shared interaction language for the first time"
+                        ]
+                    },
+                    reflection: "In a traditional product, you organize information on a screen. In spatial computing, you're organizing attention and movement inside an environment researchers are trying to think inside of there's no existing pattern library to lean on. That constraint forced every decision to be tested directly in the medium, not assumed from habit.",
+                    reflectionPlaceholder: "Reflection — spatial computing design learnings & attention mapping retrospective",
+                    reflectionHTML: `
+                        <div class="w-full rounded-2xl overflow-hidden border border-[#2036B8] bg-transparent p-0 my-8 shadow-sm">
+                            <img src="/REVLR/R_Reflection.webp" alt="REVLR Reflection" class="w-full h-full object-cover" loading="lazy" decoding="async" />
+                        </div>
+                    `,
+                    ownership: {
+                        led: "Interaction design strategy, control framework and navigation patterns, VR usability testing, design system development",
+                        codefined: "Technical feasibility with engineers, research scope with directors, cross-platform (VR + web) consistency requirements"
+                    }
+                }
+            },
+            myblockcounts: {
+                eyebrow: 'CASE STUDY 03 · CLIENT PROJECT (BLUEMETA × T.H.E. EJ LAB) · DEC 2024 – JAN 2025 · LEAD UX/UI DESIGNER, SOLO',
+                title: 'MY BLOCK COUNTS',
+                headline: 'Redesigning an abandoned civic app so that filling out a survey felt like activism, not a form.',
+                projectType: 'Civic Data & Geospatial',
+                role: 'Lead UX/UI Designer, solo',
+                duration: 'Dec 2024 – Jan 2025',
+                team: 'BlueMeta × T.H.E. EJ Lab',
+                responsibilities: 'UX research · Information architecture · Visual design · Design system · Usability testing · Accessibility audits',
+                shipped: '<a href="https://play.google.com/store/apps/details?id=com.anonymous.MyBlockCounts&hl=en_US" target="_blank" rel="noopener noreferrer" class="underline hover:opacity-80 transition-opacity">MyBlockCounts↗</a>',
+                prev: 'revlr',
+                next: 'justickets',
+                heroHTML: `
+                    <div id="cs-hero-image" class="w-full rounded-2xl overflow-hidden mb-16 shadow-sm aspect-[16/9] min-h-[280px] sm:min-h-[360px] border border-[#2036B8] bg-transparent">
+                        <img src="/MBC/MB_Hero.png" alt="My Block Counts Hero Image" class="w-full h-full object-cover" loading="eager" decoding="async" />
+                    </div>
+                `,
+                content: {
+                    context: "MyBlockCounts is an environmental justice survey app for Baltimore communities, built with T.H.E. EJ Lab. It existed, but nobody was using it the app was functionally abandoned, and the redesign had to rebuild trust, not just usability.",
+                    problem: {
+                        headline: "How might we transform an abandoned civic tool into an engaging community platform?",
+                        points: [
+                            "67% of users abandoned the survey within two minutes of opening it.",
+                            "The app dropped users straight into a 45-question survey with zero context or explanation.",
+                            "English-only design excluded an estimated 35% of the target communities.",
+                            "Generic GPS-style branding communicated 'location app,' not environmental justice advocacy."
+                        ],
+                     
+                    },
+                    research: {
+                        intro: "Worked directly with the T.H.E. EJ Lab team, WYPR hosts, and community partners, alongside a review of app store feedback, support tickets, and a competitive scan of 3–4 other civic engagement apps plus the engineering team, to understand what was actually feasible to rebuild in the timeline.",
+                        insights: [
+                            { title: "Cultural representation in illustrations directly affected trust and completion", description: "this wasn't a usability problem alone, it was a trust problem wearing a usability costume." },
+                            { title: "Context before data collection", description: "surveys without upfront mission context felt like government extraction rather than community empowerment." },
+                            { title: "Multilingual as a primary trust signal", description: "surfacing language choice upfront communicated community inclusion from the very first screen." }
+                        ],
+                        researchHTML: `
+                            <div class="w-full border border-[#2036B8] rounded-2xl bg-transparent p-5 sm:p-8 md:p-10 my-8 shadow-sm overflow-hidden">
+                                <div class="relative w-full mx-auto">
+                                    <div class="text-[10px] uppercase font-mono tracking-wider text-[#2036B8] text-center sm:hidden mb-2">
+                                        ← Scroll image to view full diagram →
+                                    </div>
+                                    <div class="w-full overflow-x-auto pb-2 scrollbar-thin">
+                                        <svg viewBox="0 0 920 540" class="w-[760px] sm:w-full min-w-[760px] sm:min-w-0 h-auto flex-shrink-0 overflow-visible" fill="none">
+                                            <defs>
+                                                <marker id="mbc-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                                    <path d="M 0 1 L 8 5 L 0 9 z" class="fill-[#2036B8]" />
+                                                </marker>
+                                            </defs>
+
+                                            <!-- CONNECTING ARROWS -->
+                                            <line x1="418" y1="228" x2="270" y2="80" class="stroke-[#2036B8]" stroke-width="1.5" marker-end="url(#mbc-arrow)" />
+                                            <line x1="398" y1="270" x2="250" y2="270" class="stroke-[#2036B8]" stroke-width="1.5" marker-end="url(#mbc-arrow)" />
+                                            <line x1="418" y1="312" x2="270" y2="460" class="stroke-[#2036B8]" stroke-width="1.5" marker-end="url(#mbc-arrow)" />
+                                            <line x1="460" y1="332" x2="460" y2="415" class="stroke-[#2036B8]" stroke-width="1.5" marker-end="url(#mbc-arrow)" />
+                                            <line x1="502" y1="312" x2="650" y2="460" class="stroke-[#2036B8]" stroke-width="1.5" marker-end="url(#mbc-arrow)" />
+                                            <line x1="522" y1="270" x2="670" y2="270" class="stroke-[#2036B8]" stroke-width="1.5" marker-end="url(#mbc-arrow)" />
+                                            <line x1="502" y1="228" x2="650" y2="80" class="stroke-[#2036B8]" stroke-width="1.5" marker-end="url(#mbc-arrow)" />
+
+                                            <!-- CENTER CIRCLE -->
+                                            <g>
+                                                <circle cx="460" cy="270" r="62" class="fill-white stroke-[#2036B8]" stroke-width="2.5" />
+                                                <text x="460" y="264" text-anchor="middle" class="fill-[#2036B8] font-bold font-mono text-[13.5px] tracking-wider">KEY</text>
+                                                <text x="460" y="282" text-anchor="middle" class="fill-[#2036B8] font-bold font-mono text-[13.5px] tracking-wider">INSIGHTS</text>
+                                            </g>
+
+                                            <!-- CARD 1: COMMUNITY PARTNERS (Top Left) -->
+                                            <g>
+                                                <rect x="50" y="30" width="220" height="100" rx="10" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                                <text x="66" y="52" class="fill-[#111118] font-mono font-bold text-[11px] tracking-tight">COMMUNITY PARTNERS</text>
+                                                <text x="66" y="71" class="fill-[#475569] font-sans text-[11px]">Community organizations</text>
+                                                <text x="66" y="86" class="fill-[#475569] font-sans text-[11px]">working directly with</text>
+                                                <text x="66" y="101" class="fill-[#475569] font-sans text-[11px]">Baltimore residents</text>
+                                                <g transform="translate(232, 40)" class="text-[#2036B8]">
+                                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                                                    <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                                                </g>
+                                            </g>
+
+                                            <!-- CARD 2: WYPR INTERVIEWS (Mid Left) -->
+                                            <g>
+                                                <rect x="30" y="220" width="220" height="100" rx="10" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                                <text x="46" y="242" class="fill-[#111118] font-mono font-bold text-[11px] tracking-tight">WYPR INTERVIEWS</text>
+                                                <text x="46" y="261" class="fill-[#475569] font-sans text-[11px]">Public radio interviews</text>
+                                                <text x="46" y="276" class="fill-[#475569] font-sans text-[11px]">with community members</text>
+                                                <text x="46" y="291" class="fill-[#475569] font-sans text-[11px]">and organizers</text>
+                                                <g transform="translate(212, 230)" class="text-[#2036B8]">
+                                                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                                    <path d="M19 10v2a7 7 0 0 1-14 0v-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                                                    <line x1="12" y1="19" x2="12" y2="22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                                </g>
+                                            </g>
+
+                                            <!-- CARD 3: COMMUNITY WORKSHOPS (Bottom Left) -->
+                                            <g>
+                                                <rect x="50" y="410" width="220" height="100" rx="10" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                                <text x="66" y="432" class="fill-[#111118] font-mono font-bold text-[11px] tracking-tight">COMMUNITY WORKSHOPS</text>
+                                                <text x="66" y="451" class="fill-[#475569] font-sans text-[11px]">Feedback sessions with</text>
+                                                <text x="66" y="466" class="fill-[#475569] font-sans text-[11px]">residents and community</text>
+                                                <text x="66" y="481" class="fill-[#475569] font-sans text-[11px]">advocates</text>
+                                                <g transform="translate(232, 420)" class="text-[#2036B8]">
+                                                    <rect x="3" y="11" width="18" height="8" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                                    <circle cx="7" cy="6" r="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                                    <circle cx="17" cy="6" r="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                                </g>
+                                            </g>
+
+                                            <!-- CARD 4: COMPETITIVE ANALYSIS (Bottom Center) -->
+                                            <g>
+                                                <rect x="350" y="415" width="220" height="100" rx="10" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                                <text x="366" y="437" class="fill-[#111118] font-mono font-bold text-[11px] tracking-tight">COMPETITIVE ANALYSIS</text>
+                                                <text x="366" y="460" class="fill-[#475569] font-sans text-[11px]">3–4 civic engagement and</text>
+                                                <text x="366" y="478" class="fill-[#475569] font-sans text-[11px]">environmental reporting apps</text>
+                                                <g transform="translate(532, 425)" class="text-[#2036B8]">
+                                                    <path d="M3 3v18h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                                                    <path d="M18 9l-5 5-4-4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                                </g>
+                                            </g>
+
+                                            <!-- CARD 5: APP STORE REVIEWS (Bottom Right) -->
+                                            <g>
+                                                <rect x="650" y="410" width="220" height="100" rx="10" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                                <text x="666" y="432" class="fill-[#111118] font-mono font-bold text-[11px] tracking-tight">APP STORE REVIEWS</text>
+                                                <text x="666" y="455" class="fill-[#475569] font-sans text-[11px]">User feedback from</text>
+                                                <text x="666" y="473" class="fill-[#475569] font-sans text-[11px]">existing product reviews</text>
+                                                <g transform="translate(832, 420)" class="text-[#2036B8]">
+                                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                                    <path d="M8 9h.01M12 9h.01M16 9h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                                </g>
+                                            </g>
+
+                                            <!-- CARD 6: ACCESSIBILITY AUDIT (Mid Right) -->
+                                            <g>
+                                                <rect x="670" y="220" width="220" height="100" rx="10" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                                <text x="686" y="242" class="fill-[#111118] font-mono font-bold text-[11px] tracking-tight">ACCESSIBILITY AUDIT</text>
+                                                <text x="686" y="265" class="fill-[#475569] font-sans text-[11px]">WAVE audits and manual</text>
+                                                <text x="686" y="283" class="fill-[#475569] font-sans text-[11px]">accessibility reviews</text>
+                                                <g transform="translate(852, 230)" class="text-[#2036B8]">
+                                                    <circle cx="12" cy="4" r="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                                    <path d="M5 9h14M12 9v6m0 0l-3 5m3-5l3 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                                                </g>
+                                            </g>
+
+                                            <!-- CARD 7: ENGINEERING CONSTRAINTS (Top Right) -->
+                                            <g>
+                                                <rect x="650" y="30" width="220" height="100" rx="10" class="fill-white stroke-[#C8D4E8]" stroke-width="1.5" />
+                                                <text x="666" y="52" class="fill-[#111118] font-mono font-bold text-[11px] tracking-tight">ENGINEERING CONSTRAINTS</text>
+                                                <text x="666" y="75" class="fill-[#475569] font-sans text-[11px]">Technical feasibility and</text>
+                                                <text x="666" y="93" class="fill-[#475569] font-sans text-[11px]">implementation planning</text>
+                                                <g transform="translate(832, 40)" class="text-[#2036B8]">
+                                                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        `
+                    },
+                    strategy: [
+                        { title: "Signal trust before asking for data", description: "language and tone had to say 'built for you' before the survey began." },
+                        { title: "Translate civic categories into lived concerns", description: "abstract survey language doesn't move people; specific ones do." },
+                        { title: "Make completing the survey feel like participation, not paperwork", description: "frame progress as community impact rather than administrative form completion." }
+                    ],
+                    decisions: [
+                        {
+                            num: "DECISION 01",
+                            title: "Should onboarding explain the mission or get users into the survey fast?",
+                            body: "Original app skipped onboarding entirely straight into 45 questions with no context, which is exactly why people abandoned it. I built a 4-screen onboarding sequence that turned first-time users into oriented community advocates before asking anything of them.",
+                            impact: "Impact: 92% onboarding completion, a 75% reduction in reported user confusion.",
+                            decisionHTML: `
+                                <div class="w-full border border-[#2036B8] rounded-2xl bg-transparent p-5 sm:p-8 space-y-8 my-6">
+                                    <!-- BEFORE BLOCK -->
+                                    <div class="space-y-3">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-[13px] font-semibold text-heading font-mono">Original Experience</span>
+                                        </div>
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-items-center">
+                                            <!-- Old Screen 1 -->
+                                            <div class="p-3 flex flex-col justify-center items-center text-center space-y-2">
+                                                <img src="/MBC/O_OB.png" alt="My Block Counts Old Screen 1" class="max-h-[360px] sm:max-h-[420px] w-auto object-contain transition-transform duration-300 hover:scale-[1.02]" loading="lazy" decoding="async" />
+                                                
+                                                <span class="text-[10.5px] text-muted-fg leading-tight">Login Before Survey</span>
+                                            </div>
+                                            <!-- Old Screen 2 -->
+                                            <div class="p-3 flex flex-col justify-center items-center text-center space-y-2">
+                                                <img src="MBC/O_Survey.png" alt="My Block Counts Old Screen 2" class="max-h-[360px] sm:max-h-[420px] w-auto object-contain transition-transform duration-300 hover:scale-[1.02]" loading="lazy" decoding="async" />
+                                              
+                                                <span class="text-[10.5px] text-muted-fg leading-tight">Category Selection Without Context</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- DIVIDER -->
+                                    <div class="w-full border-t border-[#C8D4E8]/60"></div>
+
+                                    <!-- AFTER BLOCK -->
+                                    <div class="space-y-3">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-[13px] font-semibold text-heading font-mono">New Onboarding Sequence</span>
+                                        </div>
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 justify-items-center">
+                                            <!-- New Screen 1 -->
+                                            <div class="p-2 flex flex-col justify-center items-center text-center space-y-2 w-full">
+                                                <img src="/MBC/OB1.png" alt="My Block Counts New Screen 1" class="max-h-[340px] sm:max-h-[380px] w-auto object-contain transition-transform duration-300 hover:scale-[1.02]" loading="lazy" decoding="async" />
+                                                
+                                                <span class="text-[10.5px] text-muted-fg leading-tight">Mission Introduction</span>
+                                            </div>
+                                            <!-- New Screen 2 -->
+                                            <div class="p-2 flex flex-col justify-center items-center text-center space-y-2 w-full">
+                                                <img src="/MBC/OB2.png" alt="My Block Counts New Screen 2" class="max-h-[340px] sm:max-h-[380px] w-auto object-contain transition-transform duration-300 hover:scale-[1.02]" loading="lazy" decoding="async" />
+                                            
+                                                <span class="text-[10.5px] text-muted-fg leading-tight">Community Observation</span>
+                                            </div>
+                                            <!-- New Screen 3 -->
+                                            <div class="p-2 flex flex-col justify-center items-center text-center space-y-2 w-full">
+                                                <img src="/MBC/OB3.png" alt="My Block Counts New Screen 3" class="max-h-[340px] sm:max-h-[380px] w-auto object-contain transition-transform duration-300 hover:scale-[1.02]" loading="lazy" decoding="async" />
+                                            
+                                                <span class="text-[10.5px] text-muted-fg leading-tight">Impact Framing</span>
+                                            </div>
+                                            <!-- New Screen 4 -->
+                                            <div class="p-2 flex flex-col justify-center items-center text-center space-y-2 w-full">
+                                                <img src="/MBC/OB4.png" alt="My Block Counts New Screen 4" class="max-h-[340px] sm:max-h-[380px] w-auto object-contain transition-transform duration-300 hover:scale-[1.02]" loading="lazy" decoding="async" />
+                                
+                                                <span class="text-[10.5px] text-muted-fg leading-tight">Oriented Entry</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            `
+                        },
+                        {
+                            num: "DECISION 02",
+                            title: "Static progress bar or animated, contextual progress?",
+                            body: "A/B tested both with 50 users. Animated progress with contextual category icons (heart for health, truck for transportation) won not just on completion, but because the icon created an emotional tie to the specific concern being surveyed, not just a generic sense of 'almost done.'",
+                            impact: "Impact: 34% increase in completion from the animated version alone.",
+                            decisionHTML: `
+                                <div class="w-full border border-[#2036B8] rounded-2xl bg-transparent p-5 sm:p-8 space-y-6 my-6">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-items-center">
+                                        <!-- BEFORE BLOCK -->
+                                        <div class="p-3 flex flex-col justify-center items-center text-center space-y-2 w-full">
+                                            <img src="/MBC/O_Questions.png" alt="My Block Counts Old Screen" class="max-h-[360px] sm:max-h-[420px] w-auto object-contain transition-transform duration-300 hover:scale-[1.02]" loading="lazy" decoding="async" />
+                                         
+                                            <span class="text-[10.5px] text-muted-fg leading-tight">Question-First Survey Layout</span>
+                                        </div>
+
+                                        <!-- AFTER BLOCK -->
+                                        <div class="p-3 flex flex-col justify-center items-center text-center space-y-2 w-full">
+                                            <img src="/MBC/New_Questions.png" alt="My Block Counts New Screen" class="max-h-[360px] sm:max-h-[420px] w-auto object-contain transition-transform duration-300 hover:scale-[1.02]" loading="lazy" decoding="async" />
+                                           
+                                            <span class="text-[10.5px] text-muted-fg leading-tight">Contextual Progress & Visual Feedback</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            `}
+                        ,
+                        {
+                            num: "DECISION 03",
+                            title: "Should language selection happen mid-flow or first?",
+                            body: "Research showed language wasn't a functional barrier so much as a trust signal surfacing it as the very first interaction told users the app was built for their community specifically, not translated as an afterthought.",
+                            impact: "Impact: Directly tied to the completion and trust gains above; language selection became the app's first impression, not a settings menu item.",
+                            decisionHTML: `
+                                <div class="w-full border border-[#2036B8] rounded-2xl bg-transparent p-4 sm:p-6 my-6">
+                                    <div class="p-4 sm:p-6 rounded-xl bg-white border border-[#E0E6F2] space-y-6">
+                                        <!-- ROW 1 -->
+                                        <div class="space-y-3">
+                                            <div class="text-[11px] font-mono font-bold tracking-wider text-muted-fg uppercase">
+                                                IF LANGUAGE IS JUST A FUNCTION
+                                            </div>
+                                            <div class="flex items-center justify-between w-full overflow-x-auto sm:overflow-x-visible pb-2 sm:pb-0 gap-1 sm:gap-2">
+                                                <!-- Step 1: Splash -->
+                                                <div class="flex-1 min-w-[70px] sm:min-w-0 py-2 sm:py-2.5 px-1 sm:px-2.5 rounded-lg border border-slate-200 bg-slate-50 text-[11px] sm:text-[12px] font-mono font-semibold text-fg text-center shadow-xs">
+                                                    Splash
+                                                </div>
+                                                <div class="h-0.5 w-2 sm:w-3 md:w-5 bg-slate-300 shrink-0"></div>
+                                                <!-- Step 2: Onboarding -->
+                                                <div class="flex-1 min-w-[75px] sm:min-w-0 py-2 sm:py-2.5 px-1 sm:px-2.5 rounded-lg border border-slate-200 bg-slate-50 text-[11px] sm:text-[12px] font-mono font-semibold text-fg text-center shadow-xs">
+                                                    Onboarding
+                                                </div>
+                                                <div class="h-0.5 w-2 sm:w-3 md:w-5 bg-slate-300 shrink-0"></div>
+                                                <!-- Step 3: Permissions -->
+                                                <div class="flex-1 min-w-[75px] sm:min-w-0 py-2 sm:py-2.5 px-1 sm:px-2.5 rounded-lg border border-slate-200 bg-slate-50 text-[11px] sm:text-[12px] font-mono font-semibold text-fg text-center shadow-xs">
+                                                    Permissions
+                                                </div>
+                                                <div class="h-0.5 w-2 sm:w-3 md:w-5 bg-slate-300 shrink-0"></div>
+                                                <!-- Step 4: Language (buried at step 4) -->
+                                                <div class="flex-1 min-w-[80px] sm:min-w-0 py-1.5 sm:py-2 px-1 sm:px-2 rounded-lg border-2 border-dashed border-red-300 bg-red-50/80 text-[11px] sm:text-[12px] font-mono font-bold text-red-600 text-center shadow-xs">
+                                                    <div>Language</div>
+                                                    <div class="text-[9px] sm:text-[9.5px] font-normal text-red-500/80 mt-0.5">buried at step 4</div>
+                                                </div>
+                                                <div class="h-0.5 w-2 sm:w-3 md:w-5 bg-slate-300 shrink-0"></div>
+                                                <!-- Step 5: 45-Q Survey -->
+                                                <div class="flex-1 min-w-[75px] sm:min-w-0 py-2 sm:py-2.5 px-1 sm:px-2.5 rounded-lg border border-slate-200 bg-slate-50 text-[11px] sm:text-[12px] font-mono font-semibold text-fg text-center shadow-xs">
+                                                    45-Q Survey
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- DIVIDER -->
+                                        <div class="w-full border-t border-slate-200/80"></div>
+
+                                        <!-- ROW 2 -->
+                                        <div class="space-y-3">
+                                            <div class="flex items-center justify-between">
+                                                <div class="text-[11px] font-mono font-bold tracking-wider text-[#2036B8] uppercase">
+                                                    IF LANGUAGE IS A TRUST SIGNAL
+                                                </div>
+                                                <span class="px-2.5 py-0.5 rounded-full bg-[#2036B8] text-white font-mono font-bold text-[10px] tracking-wider uppercase">
+                                                    SHIPPED
+                                                </span>
+                                            </div>
+                                            <div class="flex items-center justify-between w-full overflow-x-auto sm:overflow-x-visible pb-2 sm:pb-0 gap-1 sm:gap-2">
+                                                <!-- Step 1: Language (step 1 &middot; first interaction) -->
+                                                <div class="flex-1 min-w-[90px] sm:min-w-0 py-1.5 sm:py-2 px-1 sm:px-2 rounded-lg bg-[#2036B8] text-white text-[11px] sm:text-[12px] font-mono font-bold text-center shadow-sm">
+                                                    <div>Language</div>
+                                                    <div class="text-[9px] sm:text-[9.5px] font-normal text-blue-100/80 mt-0.5">step 1 &middot; first interaction</div>
+                                                </div>
+                                                <div class="h-0.5 w-2 sm:w-3 md:w-5 bg-slate-300 shrink-0"></div>
+                                                <!-- Step 2: Splash -->
+                                                <div class="flex-1 min-w-[70px] sm:min-w-0 py-2 sm:py-2.5 px-1 sm:px-2.5 rounded-lg border border-slate-200 bg-slate-50 text-[11px] sm:text-[12px] font-mono font-semibold text-fg text-center shadow-xs">
+                                                    Splash
+                                                </div>
+                                                <div class="h-0.5 w-2 sm:w-3 md:w-5 bg-slate-300 shrink-0"></div>
+                                                <!-- Step 3: Onboarding -->
+                                                <div class="flex-1 min-w-[75px] sm:min-w-0 py-2 sm:py-2.5 px-1 sm:px-2.5 rounded-lg border border-slate-200 bg-slate-50 text-[11px] sm:text-[12px] font-mono font-semibold text-fg text-center shadow-xs">
+                                                    Onboarding
+                                                </div>
+                                                <div class="h-0.5 w-2 sm:w-3 md:w-5 bg-slate-300 shrink-0"></div>
+                                                <!-- Step 4: Permissions -->
+                                                <div class="flex-1 min-w-[75px] sm:min-w-0 py-2 sm:py-2.5 px-1 sm:px-2.5 rounded-lg border border-slate-200 bg-slate-50 text-[11px] sm:text-[12px] font-mono font-semibold text-fg text-center shadow-xs">
+                                                    Permissions
+                                                </div>
+                                                <div class="h-0.5 w-2 sm:w-3 md:w-5 bg-slate-300 shrink-0"></div>
+                                                <!-- Step 5: 45-Q Survey -->
+                                                <div class="flex-1 min-w-[75px] sm:min-w-0 py-2 sm:py-2.5 px-1 sm:px-2.5 rounded-lg border border-slate-200 bg-slate-50 text-[11px] sm:text-[12px] font-mono font-semibold text-fg text-center shadow-xs">
+                                                    45-Q Survey
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            `
+                        },
+                        {
+                            num: "DECISION 04",
+                            title: "Preserve familiar terminology or improve discoverability visually?",
+                            body: "Changing the category names risked disrupting consistency with the survey data and stakeholder terminology. Instead, I kept the existing labels, introduced custom illustrations, and redesigned the layout so all categories were immediately visible, making them easier to recognize and navigate.",
+                            impact: "Impact: 67% reduction in reported user confusion.",
+                            decisionHTML: `
+                                <div class="w-full border border-[#2036B8] rounded-2xl bg-transparent p-5 sm:p-8 space-y-6 my-6">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-items-center">
+                                        <!-- OLD SCREEN 1 BLOCK -->
+                                        <div class="p-3 flex flex-col justify-center items-center text-center space-y-2 w-full">
+                                            <img src="/MBC/O_Survey.png" alt="My Block Counts Old Screen 1" class="max-h-[360px] sm:max-h-[420px] w-auto object-contain transition-transform duration-300 hover:scale-[1.02]" loading="lazy" decoding="async" />
+                                         
+                                            <span class="text-[10.5px] text-muted-fg leading-tight">Text-Only Category Grid</span>
+                                        </div>
+
+                                        <!-- NEW SCREEN 1 BLOCK -->
+                                        <div class="p-3 flex flex-col justify-center items-center text-center space-y-2 w-full">
+                                            <img src="/MBC/New_Survey.png.png" alt="My Block Counts New Screen 1" class="max-h-[360px] sm:max-h-[420px] w-auto object-contain transition-transform duration-300 hover:scale-[1.02]" loading="lazy" decoding="async" />
+                           
+                                            <span class="text-[10.5px] text-muted-fg leading-tight">Illustrated Category Grid</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            `
+                        }
+                    ],
+                    system: "Built a 24-piece component library covering navigation, settings, survey states, and category iconography, applied consistently across 15+ screens. Extended the EJ Lab's green palette into an accessible color spectrum, redesigned the settings from a button-heavy layout into a clean expandable list with flag-based language selection, and rebuilt navigation around an Apple Maps-style location pattern with proper action hierarchy (standard vs. destructive styling).",
+                    validation: "Built interactive Figma prototypes for 5 core flows, then ran 12 moderated usability sessions 4 per supported language, not just English speakers reacting to a translated screen. Paired that with WAVE accessibility audits and manual keyboard testing, and A/B tested 3 different progress-visualization approaches before locking the animated version.",
+                    validationPlaceholder: null,
+                    outcome: {
+                        subtext: "Shipped & Live on the App Store",
+                        points: [
+                            "+60% increase in survey completion rates",
+                            "+3X user base expansion through multi-language support",
+                            "+75% reduction in user confusion",
+                            "Shipped and live on the App Store",
+                            "92% onboarding completion, up from a 67% two-minute abandonment rate",
+                            "45% faster task completion after the navigation and settings redesign",
+                            "34% completion lift attributable specifically to animated, contextual progress indicators",
+                            "Multi-language support (English, Spanish, Chinese) built in from the first onboarding screen, not bolted on after"
+                        ]
+                    },
+                    reflection: "The biggest shift wasn't visual it was realizing users weren't filling out a form, they were participating in something. That reframing is what justified language selection going first, categories getting rewritten in plain language, and progress feeling celebratory instead of clinical. Designing for civic trust turned out to be a different discipline than designing for task completion, even though the metrics look the same on a dashboard.",
+                    ownership: {
+                        led: "UX research, information architecture, visual design, design system, usability testing, accessibility audits, stakeholder coordination",
+                        codefined: "Technical constraints and feasibility with the development team"
+                    }
+                }
+            },
+            justickets: {
+                decisionsLayout: "stacked",
+                eyebrow: 'CASE STUDY 04 · QUBE CINEMA TECHNOLOGIES · AUG 2022 – JAN 2023 · PRODUCT DESIGNER',
+                title: 'JUSTICKETS',
+                headline: 'Scaling a production movie-ticketing product without slowing feature delivery.',
+                projectType: 'Consumer E-Commerce',
+                role: 'Product Designer',
+                duration: 'Aug 2022 – Jan 2023',
+                team: 'Qube Cinema Technologies',
+                responsibilities: 'Mobile UI/UX · Seat Selection Canvas · E-Commerce Checkout · Design System',
+                shipped: '<a href="https://play.google.com/store/apps/details?id=in.justickets.android&hl=en_US" target="_blank" rel="noopener noreferrer" class="underline hover:opacity-80 transition-opacity">JUSTICKETS↗</a>',
+                prev: 'myblockcounts',
+                next: 'youtopia',
+                heroHTML: `
+                    <div id="cs-hero-image" class="w-full rounded-2xl overflow-hidden mb-16 shadow-sm aspect-[16/9] min-h-[280px] sm:min-h-[360px] border border-[#2036B8] bg-transparent">
+                        <img src="/JT/J_Hero.png" alt="Justickets Hero Image" class="w-full h-full object-cover" loading="eager" decoding="async" />
+                    </div>
+                `,
+                content: {
+                    decisionsLayout: "side-card",
+                    context: "Justickets was growing feature by feature: offers, food ordering, Moviebuff content, special screening messages, each shipped in isolation. The features weren't the problem. The fragmentation underneath them was going to make the next feature slower to ship than the last, not faster.",
+                    problem: {
+                        headline: "How might we keep shipping new features without every one of them re-solving problems the last one already solved?",
+                        points: [
+                            "Seat selection and payment, the highest-stakes screen in the app, had inconsistent spacing and unclear states.",
+                            "Movie listing cards varied screen to screen with no shared structure.",
+                            "Every new feature (offers, food ordering, partner content) was built on its own component base.",
+                            "Design-to-dev handoff repeated the same negotiation every sprint, with no shared source of truth."
+                        ]
+                    },
+                    research: {
+                        title: "System audit",
+                        intro: "I audited the booking journey end to end across app and web, specifically looking for repeated patterns and where reusability was already breaking down. The finding: this wasn't a design-quality problem, it was a source-of-truth problem. Every new feature was re-negotiating spacing, states, and components that an earlier feature had already solved.\n\nThe real decision: product wanted forward motion. Every week without a new feature was pressure to just ship the next one. I made the case that shipping without a shared foundation wasn't saving time, it was compounding debt that would eventually slow delivery to a crawl. The trade-off I offered: pause new feature work briefly to build the system on the highest-stakes, most-repeated screen first, seat selection and payment, so everything after it would ship faster, not slower. That argument won on the evidence that every prior feature had already needed its own one-off component work; the system was the fix, not a delay."
+                    },
+                    decisions: [
+                        {
+                            num: "DECISION 01",
+                            title: "BEFORE / AFTER SEAT SELECTION AND PAYMENT",
+                            body: "This became the system's reference standard because it was the highest-stakes, most-repeated pattern in the app. Before: Inconsistent spacing and unclear seat states created friction at checkout the exact moment users were closest to abandoning if something felt uncertain. After: Defined and standardized four explicit seat states available, selected, reserved, blocked with consistent spacing and hierarchy carried through the entire booking flow. One more product decision, not just a component one: food & beverage ordering could have shipped as its own ecommerce-style flow, separate from ticket booking. I chose to fold it into checkout using the same component patterns as the rest of the app instead so buying snacks felt like one more step in getting your ticket, not a second app bolted onto the first.",
+                            impact: "IMPACT: STANDARDIZED 4 SEAT STATES & INTEGRATED FOOD & BEVERAGE ORDERING INTO CHECKOUT FLOW.",
+                            image: "/JT/JT_Offers.png"
+                        },
+                        {
+                            num: "DECISION 02",
+                            title: "FOOD & BEVERAGE: ECOMMERCE FLOW, OR PART OF TICKET BOOKING?",
+                            body: "Food & beverage ordering could have shipped as its own ecommerce-style flow, separate from ticket booking. I chose to fold it into checkout using the same component patterns as the rest of the app instead, so buying snacks felt like one more step in getting your ticket, not a second app bolted onto the first.",
+                            impact: "IMPACT: INTEGRATED FOOD & BEVERAGE DIRECTLY INTO CHECKOUT FLOW USING SHARED COMPONENT PATTERNS.",
+                            image: "/JT/JT_Food.png"
+                        },
+                        {
+                            num: "DECISION 03",
+                            title: "PAYMENT: BUILD A NEW PATTERN, OR EXTEND THE SEAT-SELECTION SYSTEM?",
+                            body: "The payment summary screen was built on the same component base established by seat selection: buttons, inputs, spacing, hierarchy, rather than starting from zero the way every prior feature had before the system existed. This was the proof that the system worked: the highest-friction screen in the app inherited stability from a decision made two screens earlier.",
+                            impact: "IMPACT: UNIFIED PAYMENT SUMMARY SCREEN BUILT ON SHARED SYSTEM COMPONENT BASE.",
+                            image: "/JT/JT_Payment.png"
+                        },
+                        {
+                            num: "DECISION 04",
+                            title: "OFFERS & PROMOTIONS: INTERRUPT CHECKOUT, OR SUPPORT IT?",
+                            body: "Offers needed to slot into the booking flow without competing with the checkout task the user was already mid-way through. Built using the same component standards as seat selection and payment, so a promotional moment felt like part of the same product, not an ad breaking the flow.",
+                            impact: "IMPACT: SLOTTED PROMOTIONS INTO CHECKOUT FLOW WITH SHARED DESIGN STANDARDS.",
+                            image: "/JT/JT_Offers.png"
+                        }
+                    ],
+                    systemTitle: "Execution",
+                    system: "Every feature built after the seat-selection standard, including food & beverage ordering, offers/promotions, and the payment summary screen, was built on that same component base rather than starting from zero. Standardized buttons, inputs, cards, spacing, typography, and interaction states, aligned to Qube's broader guidelines.",
+                    outcome: {
+                        subtext: "Shipped and live",
+                        points: [
+                            "Shipped and live: 1M+ downloads, 25.9K+ reviews, still in production",
+                            "4 major features shipped on the same system after it was established",
+                            "+20% increase in user satisfaction (confirm measurement source before stating this in an interview)",
+                            "The system extended beyond Justickets, adopted as a shared standard on other Qube products (Qube Wire, Qube XP) and I mentored incoming designers on how to use it"
+                        ]
+                    },
+                    reflection: "I started this thinking the work was about making screens look good. It turned out to be about anticipating where teams would get stuck before it became their problem, and about staying with the work after it shipped: testing it myself, catching bugs before users did, caring whether spacing felt right in real light on a real device. That's not QA. That's ownership.",
+                    ownership: {
+                        led: "Design system creation, seat selection & payment redesign, food & beverage flow, offers/promotions, pre- and post-launch validation",
+                        codefined: "Component standards alignment with Qube's broader design guidelines, engineering feasibility during implementation"
+                    }
+                }
+            }
+        };
+
+        function renderCaseStudyHTML(data) {
+            const DIVIDER = `<div class="border-t border-[#2036B8]"></div>`;
+            let sections = [];
+
+            if (data.ndaNotice) {
+                sections.push(`
+                    <div class="p-4 border border-[#2036B8]/30 bg-[#2036B8]/5 text-[13px] md:text-[14px] text-muted w-full font-mono">
+                        <span class="font-bold text-[#2036B8] uppercase">NDA Note:</span> ${data.ndaNotice}
+                    </div>
+                `);
+            }
+
+            // 1. CONTEXT
+            sections.push(`
+                <section class="space-y-4">
+                    <h2 class="font-display text-[24px] sm:text-[32px] md:text-[40px] text-heading">CONTEXT</h2>
+                    <p class="text-[14px] sm:text-[15px] md:text-[16px] leading-[1.65] sm:leading-[1.7] text-fg w-full">
+                        ${data.context}
+                    </p>
+                </section>
+            `);
+
+            // 2. PROBLEM DEFINITION
+            let problemPointsHTML = data.problem.points.map((pt, idx) => `
+                <div class="p-3.5 sm:p-5 text-[13.5px] sm:text-[15px] leading-[1.6] sm:leading-[1.7] text-fg flex items-start gap-2.5 sm:gap-4">
+                    <span class="font-mono text-[11px] sm:text-xs md:text-sm font-semibold text-[#2036B8] mt-0.5 shrink-0 min-w-[18px] sm:min-w-[20px]">0${idx + 1}</span>
+                    <span class="break-words">${pt}</span>
+                </div>
+            `).join('');
+
+            let problemCard = data.problem.problemHTML ? data.problem.problemHTML : (data.problem.placeholder ? `<div class="image-placeholder-card">${data.problem.placeholder}</div>` : '');
+
+            sections.push(`
+                <section class="space-y-5 sm:space-y-6">
+                    <h2 class="font-display text-[24px] sm:text-[32px] md:text-[40px] text-heading">PROBLEM DEFINITION</h2>
+                    <p class="text-[14px] sm:text-[15px] md:text-[16px] font-medium leading-[1.6] text-fg w-full">
+                        ${data.problem.headline}
+                    </p>
+                    <div class="border border-[#2036B8] divide-y divide-[#2036B8] rounded-none w-full">
+                        ${problemPointsHTML}
+                    </div>
+                    ${problemCard}
+                </section>
+            `);
+
+            // 3. RESEARCH & DISCOVERY
+            let researchTitle = data.research.title || 'RESEARCH & DISCOVERY';
+            let insightsHTML = (data.research.insights && data.research.insights.length > 0) ? `
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 pt-2 sm:pt-4">
+                    ${data.research.insights.map(item => `
+                        <div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-[#2036B8] mb-3 sm:mb-4"></div>
+                            <h3 class="font-semibold text-fg text-[14px] sm:text-[15px] mb-1.5 sm:mb-2 leading-snug">${item.title}</h3>
+                            <p class="text-[13.5px] sm:text-[14.5px] md:text-[15px] leading-[1.6] sm:leading-[1.65] text-fg">${item.description}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            ` : '';
+
+            let researchCard = data.research.researchHTML ? data.research.researchHTML : (data.research.placeholder ? `<div class="image-placeholder-card">${data.research.placeholder}</div>` : '');
+
+            let researchParagraphs = data.research.intro.split('\n\n').map(p => `
+                <p class="text-[14px] sm:text-[15px] md:text-[16px] leading-[1.65] text-fg w-full mb-3 sm:mb-4">
+                    ${p.trim().replace(/\n/g, '<br/>')}
+                </p>
+            `).join('');
+
+            sections.push(`
+                <section class="space-y-4">
+                    <h2 class="font-display text-[24px] sm:text-[32px] md:text-[40px] text-heading uppercase">${researchTitle}</h2>
+                    <div>
+                        ${researchParagraphs}
+                    </div>
+                    ${insightsHTML}
+                    ${researchCard}
+                </section>
+            `);
+
+            // 4. DESIGN STRATEGY (Conditional)
+            if (data.strategy && data.strategy.length > 0) {
+                let strategyHTML = data.strategy.map((item, idx) => `
+                    <div class="flex items-start gap-4 sm:gap-6">
+                        <span class="font-display text-[24px] sm:text-[28px] md:text-[36px] text-neutral-400 leading-none shrink-0">0${idx + 1}</span>
+                        <div>
+                            <h3 class="font-semibold text-fg text-[14px] sm:text-[15px] mb-1">${item.title}</h3>
+                            <p class="text-[13.5px] sm:text-[14.5px] md:text-[15px] leading-[1.6] sm:leading-[1.65] text-fg">${item.description}</p>
+                        </div>
+                    </div>
+                `).join('');
+
+                sections.push(`
+                    <section class="space-y-5 sm:space-y-6">
+                        <h2 class="font-display text-[24px] sm:text-[32px] md:text-[40px] text-heading">DESIGN STRATEGY</h2>
+                        <div class="space-y-6 sm:space-y-8 w-full">
+                            ${strategyHTML}
+                        </div>
+                    </section>
+                `);
+            }
+
+            // 5. KEY DESIGN DECISIONS
+            let decisionsHTML = data.decisions.map(dec => {
+                let bodyParagraphs = dec.body.split('\n\n').map(p => `
+                    <p class="text-[13.5px] sm:text-[14.5px] md:text-[15px] leading-[1.65] text-fg">
+                        ${p.trim().replace(/\n/g, '<br/>')}
+                    </p>
+                `).join('');
+
+                if (data.decisionsLayout === "stacked" || dec.layout === "stacked") {
+                    let imageSrc = dec.image || "/JT_Offer.webp";
+                    return `
+                        <div class="w-full border border-[#2036B8] rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 bg-transparent my-6 sm:my-8 space-y-6 sm:space-y-8">
+                            <!-- Decision Text & Impact (Top) -->
+                            <div class="space-y-4 sm:space-y-6 w-full">
+                                <div>
+                                    <div class="font-bold text-[#2036B8] text-[11px] sm:text-[12px] md:text-[13px] tracking-[0.05em] uppercase mb-2 sm:mb-3">
+                                        ${dec.num}
+                                    </div>
+                                    <h3 class="font-display font-bold text-[28px] sm:text-[32px] md:text-[36px] leading-[1.18] text-[#2036B8] uppercase mb-4 sm:mb-6">
+                                        ${dec.title}
+                                    </h3>
+                                    <div class="space-y-3 sm:space-y-4">
+                                        ${bodyParagraphs}
+                                    </div>
+                                </div>
+                                ${dec.impact ? `
+                                <div class="inline-block border-[1.5px] border-[#2036B8] px-4 py-3 sm:px-5 sm:py-3.5 bg-transparent mt-2 sm:mt-4 w-full">
+                                    <span class="text-[#2036B8] text-[11px] sm:text-[12px] md:text-[12.5px] font-bold tracking-[0.05em] uppercase leading-snug block">
+                                        ${dec.impact}
+                                    </span>
+                                </div>
+                                ` : ''}
+                            </div>
+                            <!-- Image Mockup Under Decision (Bottom) -->
+                            <div class="w-full flex justify-center items-center pt-2 sm:pt-4">
+                                <img src="${imageSrc}" alt="${dec.title}" class="w-auto max-h-[420px] sm:max-h-[500px] md:max-h-[580px] object-contain transition-transform duration-300 hover:scale-[1.02]" loading="lazy" decoding="async" />
+                            </div>
+                        </div>
+                    `;
+                }
+
+                if (data.decisionsLayout === "side-card" || dec.layout === "side-card") {
+                    let imageSrc = dec.image || "/JT_Offer.webp";
+                    return `
+                        <div class="w-full border border-[#2036B8] rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 bg-transparent my-6 sm:my-8">
+                            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-10 lg:gap-12 items-center">
+                                <!-- Left Column (6 Cols): Content & Impact -->
+                                <div class="lg:col-span-6 flex flex-col justify-between h-full space-y-4 sm:space-y-6">
+                                    <div>
+                                        <div class="font-bold text-[#2036B8] text-[11px] sm:text-[12px] md:text-[13px] tracking-[0.05em] uppercase mb-2 sm:mb-3">
+                                            ${dec.num}
+                                        </div>
+                                        <h3 class="font-display font-bold text-[28px] sm:text-[32px] md:text-[36px] leading-[1.18] text-[#2036B8] uppercase mb-4 sm:mb-6">
+                                            ${dec.title}
+                                        </h3>
+                                        <div class="space-y-3 sm:space-y-4">
+                                            ${bodyParagraphs}
+                                        </div>
+                                    </div>
+                                    ${dec.impact ? `
+                                    <div class="inline-block border-[1.5px] border-[#2036B8] px-4 py-3 sm:px-5 sm:py-3.5 bg-transparent mt-4 sm:mt-6 w-full">
+                                        <span class="text-[#2036B8] text-[11px] sm:text-[12px] md:text-[12.5px] font-bold tracking-[0.05em] uppercase leading-snug block">
+                                            ${dec.impact}
+                                        </span>
+                                    </div>
+                                    ` : ''}
+                                </div>
+                                <!-- Right Column (6 Cols): Image Mockup -->
+                                <div class="lg:col-span-6 flex justify-center items-center py-2 sm:py-4">
+                                    <img src="${imageSrc}" alt="${dec.title}" class="w-auto max-h-[360px] sm:max-h-[440px] md:max-h-[500px] object-contain transition-transform duration-300 hover:scale-[1.02]" loading="lazy" decoding="async" />
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                let card = dec.decisionHTML ? dec.decisionHTML : (dec.image ? `<div class="w-full flex justify-center items-center pt-2 sm:pt-4"><img src="${dec.image}" alt="${dec.title}" class="w-auto max-h-[420px] sm:max-h-[500px] md:max-h-[580px] object-contain transition-transform duration-300 hover:scale-[1.02]" loading="lazy" decoding="async" /></div>` : (dec.placeholder ? `<div class="image-placeholder-card">${dec.placeholder}</div>` : ''));
+
+                return `
+                    <div class="space-y-4 sm:space-y-6 w-full">
+                        <div>
+                            <div class="font-bold text-[#2036B8] text-[11px] sm:text-[12px] md:text-[13px] tracking-[0.05em] uppercase mb-1.5 sm:mb-2">${dec.num}</div>
+                            <h3 class="font-display font-bold text-[18px] sm:text-[22px] md:text-[28px] leading-[1.25] text-heading mb-2 sm:mb-3">
+                                ${dec.title}
+                            </h3>
+                            <div>
+                                ${bodyParagraphs}
+                            </div>
+                            ${dec.impact ? `
+                            <div class="inline-block border border-[#2036B8] px-3 py-1.5 sm:px-4 sm:py-2.5 mt-2">
+                                <span class="text-[#2036B8] text-[10.5px] sm:text-[12px] md:text-[13px] font-bold tracking-[0.05em] uppercase">
+                                    ${dec.impact}
+                                </span>
+                            </div>
+                            ` : ''}
+                        </div>
+                        ${card ? `<div class="w-full">${card}</div>` : ''}
+                    </div>
+                `;
+            }).join('');
+
+            let decisionsCard = data.decisionsHTML ? data.decisionsHTML : (data.decisionsPlaceholder ? `<div class="image-placeholder-card">${data.decisionsPlaceholder}</div>` : '');
+
+            sections.push(`
+                <section class="space-y-6 sm:space-y-12">
+                    <h2 class="font-display text-[24px] sm:text-[32px] md:text-[40px] text-heading uppercase">KEY DESIGN DECISIONS</h2>
+                    <div class="space-y-10 sm:space-y-16 w-full">
+                        ${decisionsHTML}
+                    </div>
+                    ${decisionsCard}
+                </section>
+            `);
+
+            // 6. SYSTEM & EXECUTION
+            let systemTitle = data.systemTitle || 'SYSTEM & EXECUTION';
+            let sysCard = data.systemHTML ? data.systemHTML : (data.systemPlaceholder ? `<div class="image-placeholder-card">${data.systemPlaceholder}</div>` : '');
+            sections.push(`
+                <section class="space-y-4">
+                    <h2 class="font-display text-[24px] sm:text-[32px] md:text-[40px] text-heading uppercase">${systemTitle}</h2>
+                    <p class="text-[13.5px] sm:text-[14.5px] md:text-[15px] leading-[1.6] sm:leading-[1.65] text-fg w-full">
+                        ${data.system}
+                    </p>
+                    ${sysCard}
+                </section>
+            `);
+
+            // 7. VALIDATION
+            if (data.validation) {
+                let valCard = data.validationHTML ? data.validationHTML : (data.validationPlaceholder ? `<div class="image-placeholder-card">${data.validationPlaceholder}</div>` : '');
+                sections.push(`
+                    <section class="space-y-4">
+                        <h2 class="font-display text-[24px] sm:text-[32px] md:text-[40px] text-heading uppercase">VALIDATION</h2>
+                        <p class="text-[13.5px] sm:text-[14.5px] md:text-[15px] leading-[1.6] sm:leading-[1.65] text-fg w-full">
+                            ${data.validation}
+                        </p>
+                        ${valCard}
+                    </section>
+                `);
+            }
+
+            // 8. OUTCOME
+            let outcomeSubtext = data.outcome.subtext ? `<p class="text-[11px] sm:text-[12px] md:text-[13px] uppercase tracking-[0.18em] text-muted font-medium">${data.outcome.subtext}</p>` : '';
+            let outcomePointsHTML = data.outcome.points.map((pt, idx) => `
+                <div class="p-3.5 sm:p-5 text-[13.5px] sm:text-[15px] leading-[1.6] sm:leading-[1.65] text-fg flex items-start gap-2.5 sm:gap-4">
+                    <span class="font-mono text-[11px] sm:text-xs md:text-sm font-semibold text-[#2036B8] mt-0.5 shrink-0 min-w-[18px] sm:min-w-[20px]">0${idx + 1}</span>
+                    <span class="break-words">${pt}</span>
+                </div>
+            `).join('');
+
+            sections.push(`
+                <section class="space-y-5 sm:space-y-6">
+                    <h2 class="font-display text-[24px] sm:text-[32px] md:text-[40px] text-heading uppercase">OUTCOME</h2>
+                    ${outcomeSubtext}
+                    <div class="border border-[#2036B8] divide-y divide-[#2036B8] rounded-none w-full">
+                        ${outcomePointsHTML}
+                    </div>
+                </section>
+            `);
+
+            // 9. REFLECTION
+            let reflectionCard = data.reflectionHTML ? data.reflectionHTML : (data.reflectionPlaceholder ? `<div class="image-placeholder-card">${data.reflectionPlaceholder}</div>` : '');
+            sections.push(`
+                <section class="space-y-4">
+                    <h2 class="font-display text-[24px] sm:text-[32px] md:text-[40px] text-heading">REFLECTION</h2>
+                    <p class="text-[13.5px] sm:text-[14.5px] md:text-[15px] leading-[1.6] sm:leading-[1.65] text-fg w-full">
+                        ${data.reflection}
+                    </p>
+                    ${reflectionCard}
+                </section>
+            `);
+
+            // 10. OWNERSHIP
+            sections.push(`
+                <section class="space-y-5 sm:space-y-6">
+                    <h2 class="font-display text-[24px] sm:text-[32px] md:text-[40px] text-heading">OWNERSHIP</h2>
+                    <div class="space-y-4 w-full">
+                        <div>
+                            <span class="text-[10.5px] sm:text-[11px] uppercase tracking-[0.18em] text-accent font-semibold block mb-1">I LED</span>
+                            <p class="text-[13.5px] sm:text-[14.5px] md:text-[15px] leading-[1.6] sm:leading-[1.65] text-fg">${data.ownership.led}</p>
+                        </div>
+                        <div>
+                            <span class="text-[10.5px] sm:text-[11px] uppercase tracking-[0.18em] text-accent font-semibold block mb-1">CO-DEFINED</span>
+                            <p class="text-[13.5px] sm:text-[14.5px] md:text-[15px] leading-[1.6] sm:leading-[1.65] text-fg">${data.ownership.codefined}</p>
+                        </div>
+                    </div>
+                </section>
+            `);
+
+            return sections.join(`\n\n${DIVIDER}\n\n`);
+        }
+
+        let youtopiaUnlocked = false;
+
+        function toggleCsPasswordVisibility() {
+            const input = document.getElementById('cs-password-input');
+            const showIcon = document.getElementById('cs-eye-show');
+            const hideIcon = document.getElementById('cs-eye-hide');
+            if (!input) return;
+
+            if (input.type === 'password') {
+                input.type = 'text';
+                if (showIcon) showIcon.classList.remove('hidden');
+                if (hideIcon) hideIcon.classList.add('hidden');
+            } else {
+                input.type = 'password';
+                if (showIcon) showIcon.classList.add('hidden');
+                if (hideIcon) hideIcon.classList.remove('hidden');
+            }
+        }
+
+        function handlePasswordSubmit(e) {
+            e.preventDefault();
+            const input = document.getElementById('cs-password-input');
+            const errorEl = document.getElementById('cs-password-error');
+            const val = input ? input.value.trim() : '';
+
+            const validPasswords = ['hotsauce:3', 'hotsauce3', 'hotsauce', 'youtopia', 'password', 'keerthana', 'design', '1234'];
+
+            if (validPasswords.includes(val.toLowerCase())) {
+                youtopiaUnlocked = true;
+                if (errorEl) errorEl.classList.add('hidden');
+                renderCaseStudy();
+            } else {
+                if (errorEl) {
+                    errorEl.classList.remove('hidden');
+                }
+                if (input) {
+                    input.classList.add('border-red-500');
+                    input.focus();
+                }
+            }
+        }
+
+        function renderCaseStudy() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectId = urlParams.get('project') || 'youtopia';
+            const project = PROJECTS[projectId] || PROJECTS.youtopia;
+
+            const mainContent = document.getElementById('cs-main-content');
+            const passwordGate = document.getElementById('cs-password-gate');
+
+            // Lock Youtopia whenever user navigates away to another project
+            if (projectId !== 'youtopia') {
+                youtopiaUnlocked = false;
+            }
+
+            // Always populate Title, Headline, and Metadata Grid (Role, Duration, Team, Responsibilities)
+            document.title = `${project.title} — Case Study | Keerthana Ravichandran`;
+            document.getElementById('cs-title').innerText = project.title;
+            document.getElementById('cs-headline').innerText = project.headline;
+            if (document.getElementById('cs-meta-role')) document.getElementById('cs-meta-role').innerText = project.role || 'Product Designer';
+            document.getElementById('cs-meta-team').innerText = project.team;
+            document.getElementById('cs-meta-responsibilities').innerText = project.responsibilities;
+            document.getElementById('cs-meta-duration').innerText = project.duration;
+
+            // Check if Youtopia is locked
+            if (projectId === 'youtopia' && !youtopiaUnlocked) {
+                document.title = `Protected — Youtopia Case Study | Keerthana Ravichandran`;
+                document.getElementById('cs-meta-shipped').innerText = project.shipped;
+                if (mainContent) mainContent.classList.add('hidden');
+                if (passwordGate) {
+                    passwordGate.classList.remove('hidden');
+                    const input = document.getElementById('cs-password-input');
+                    const errorEl = document.getElementById('cs-password-error');
+                    if (input) {
+                        input.value = '';
+                        input.classList.remove('border-red-500');
+                    }
+                    if (errorEl) errorEl.classList.add('hidden');
+                }
+                return;
+            }
+
+            // Unlocked or public case study
+            document.getElementById('cs-meta-shipped').innerHTML = project.shipped;
+            if (passwordGate) passwordGate.classList.add('hidden');
+            if (mainContent) mainContent.classList.remove('hidden');
+
+            const heroElem = document.getElementById('cs-hero-image');
+            if (heroElem) {
+                if (project.heroHTML) {
+                    heroElem.outerHTML = project.heroHTML;
+                } else {
+                    heroElem.outerHTML = `<div id="cs-hero-image" class="image-placeholder-card min-h-[360px] flex items-center justify-center rounded-2xl mb-16">Hero image — 16:9 or full-bleed</div>`;
+                }
+            }
+
+            const contentBody = document.getElementById('cs-content-body');
+            if (contentBody) {
+                contentBody.innerHTML = renderCaseStudyHTML(project.content);
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', renderCaseStudy);
+    </script>
+</body>
+</html>
